@@ -1,11 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
+import { Layout } from "../components/layout/Layout";
 
 export default function Home() {
   return (
     <>
-      <div className="text-4xl">Hello World</div>
+      <Layout title="Home">
+        <div className="text-4xl">Hello World</div>
+      </Layout>
     </>
   );
 }
