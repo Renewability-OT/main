@@ -1,26 +1,54 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  /* Colors */
+  /* Color Mode HSL(hue, saturation, lightness) */
+  --first-color: "";
+  --button-color: "";
+  --button-color-alt: "";
+  --title-color: "";
+  --text-color: "";
+  --text-color-light: "";
+  --body-color: "";
+  --container-color: #fff;
+  --border-color: "";
+
+  /* Font and Typography */
+  /* .5rem = 8px | 1rem = 16px */
+  --body-font: "Roboto", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html {
+  scroll-behavior: smooth;
+}
+body,
+button,
+input {
+  font-family: var(--body-font);
+}
+body {
+  margin: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
