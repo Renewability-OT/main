@@ -5,7 +5,7 @@ import { Switch } from "../switch/Switch";
 export const Navbar: React.FC = () => {
   return (
     <>
-      <nav className="bg-light dark:bg-dark fixed h-16 lg:h-20 top-0 left-0 right-0 px-12 flex items-center justify-center shadow-lg">
+      <nav className="bg-light dark:bg-dark fixed h-16 lg:h-20 top-0 left-0 right-0 px-12 flex items-center justify-center shadow-lg z-50">
         <div className="flex items-center w-container">
           <Link
             href="/"
@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
                 before:opacity-0
                 before:transition-all
                 before:duration-500
-                before:bg-green
+                before:bg-lightBlue
                 hover:before:w-full
                 hover:before:opacity-100"
             >
@@ -58,7 +58,7 @@ export const Navbar: React.FC = () => {
                 before:opacity-0
                 before:transition-all
                 before:duration-500
-                before:bg-green
+                before:bg-lightBlue
                 hover:before:w-full
                 hover:before:opacity-100"
             >
@@ -81,7 +81,7 @@ export const Navbar: React.FC = () => {
                 before:opacity-0
                 before:transition-all
                 before:duration-500
-                before:bg-green
+                before:bg-lightBlue
                 hover:before:w-full
                 hover:before:opacity-100"
             >
@@ -104,7 +104,7 @@ export const Navbar: React.FC = () => {
                 before:opacity-0
                 before:transition-all
                 before:duration-500
-                before:bg-green
+                before:bg-lightBlue
                 hover:before:w-full
                 hover:before:opacity-100"
             >
