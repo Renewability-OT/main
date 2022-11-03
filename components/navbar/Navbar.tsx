@@ -16,17 +16,97 @@ export const Navbar: React.FC = () => {
             />
             Renewability OT
           </Link>
-          <ul className="grid grid-cols-4 text-center w-[18rem] m-0 p-0 relative mr-auto ml-6">
-            <li className="text-green hover:font-bold">
+          <ul className="text-center flex justify-start items-center w-[22rem] m-0 p-0 relative mr-auto ml-9">
+            <li
+              className="
+                mr-4
+              text-green 
+                font-thin 
+                relative
+                w-fit
+                before:content-['']
+                before:absolute
+                before:-bottom-1
+                before:left-0
+                before:w-0
+                before:h-[.15rem]
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-green
+                hover:before:w-full
+                hover:before:opacity-100"
+            >
               <Link href="">Home</Link>
             </li>
-            <li className="text-green hover:font-bold">
+            <li
+              className="
+                mr-4
+                text-green 
+                font-thin             
+                relative
+                w-fit
+                before:content-['']
+                before:absolute
+                before:-bottom-1
+                before:left-0
+                before:w-0
+                before:h-[.15rem]
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-green
+                hover:before:w-full
+                hover:before:opacity-100"
+            >
               <Link href="">Services</Link>
             </li>
-            <li className="text-green hover:font-bold">
+            <li
+              className="
+                mr-4
+              text-green 
+                font-thin 
+                relative
+                w-fit
+                before:content-['']
+                before:absolute
+                before:-bottom-1
+                before:left-0
+                before:w-0
+                before:h-[.15rem]
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-green
+                hover:before:w-full
+                hover:before:opacity-100"
+            >
               <Link href="">Blog</Link>
             </li>
-            <li className="text-green hover:font-bold">
+            <li
+              className="
+                mr-4
+                text-green 
+                font-thin
+                relative
+                w-fit
+                before:content-['']
+                before:absolute
+                before:-bottom-1
+                before:left-0
+                before:w-0
+                before:h-[.15rem]
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-green
+                hover:before:w-full
+                hover:before:opacity-100"
+            >
               <Link href="">About Us</Link>
             </li>
           </ul>
