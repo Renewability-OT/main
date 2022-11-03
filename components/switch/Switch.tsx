@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 
 export const Switch: React.FC = () => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
   return (
     <>
       <input type="checkbox" id="toggle" className="w-0 h-0 invisible peer" />
       <label
         htmlFor="toggle"
+        onClick={() => setDarkMode(!darkMode)}
         className="
         mr-2
         w-12 
         h-6 
         relative 
         block 
-        bg-[#ebebeb] 
+        bg-[#ebebeb]
+        dark:bg-[#5F6668] 
         rounded-xl 
         shadow-[inset_0px_5px_15px_rgba(0,0,0,0.1)] 
         cursor-pointer
@@ -99,7 +103,6 @@ export const Switch: React.FC = () => {
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
-          enable-background="new 0 0 512 512"
           className="absolute w-3 top-[6.1px] left-[29px] fill-[#B6B6B6]"
         >
           <g>

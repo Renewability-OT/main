@@ -1,4 +1,5 @@
 module.exports = {
+  darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -7,6 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        light: "#FEFEFE",
+        dark: "#383C3E",
         green: "#36C980",
         pink: "#C9367F",
         lightBlue: "#36C9C9",

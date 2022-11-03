@@ -1,11 +1,11 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch } from "../switch/Switch";
 
 export const Navbar: React.FC = () => {
   return (
     <>
-      <nav className="fixed h-16 lg:h-20 top-0 left-0 right-0 px-12 flex items-center justify-center shadow-lg">
+      <nav className="bg-light dark:bg-dark fixed h-16 lg:h-20 top-0 left-0 right-0 px-12 flex items-center justify-center shadow-lg">
         <div className="flex items-center w-container">
           <Link
             href="/"
