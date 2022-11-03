@@ -9,7 +9,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center w-container">
           <Link
             href="/"
-            className="text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-lightBlue to-green"
+            className="text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
           >
             <img
               className="w-6 lg:w-7 mr-1 inline"
@@ -21,7 +21,7 @@ export const Navbar: React.FC = () => {
             <li
               className="
                 mr-4
-              text-green 
+              text-lightBlue 
                 font-thin 
                 relative
                 w-fit
@@ -44,7 +44,7 @@ export const Navbar: React.FC = () => {
             <li
               className="
                 mr-4
-                text-green 
+                text-lightBlue 
                 font-thin             
                 relative
                 w-fit
@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
             <li
               className="
                 mr-4
-              text-green 
+              text-lightBlue 
                 font-thin 
                 relative
                 w-fit
@@ -90,7 +90,7 @@ export const Navbar: React.FC = () => {
             <li
               className="
                 mr-4
-                text-green 
+                text-lightBlue 
                 font-thin
                 relative
                 w-fit
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
             </li>
           </ul>
           <Switch />
-          <button className="bg-green font-bold text-sm text-[#FFFFFF] px-5 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton">
+          <button className="bg-lightBlue font-bold text-sm text-[#FFFFFF] px-5 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton">
             Book Now
           </button>
         </div>

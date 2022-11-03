@@ -26,7 +26,7 @@ export const Switch: React.FC = () => {
         after:absolute
         after:top-[.12rem]
         after:left-[.18rem]
-        after:bg-green
+        after:bg-lightBlue
         after:rounded-[180px]
         after:shadow-[0px_5px_10px_rgba(0,0,0,0.2)]
         peer-checked:after:left-[25.5px]
