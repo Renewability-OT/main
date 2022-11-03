@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { ReactNode } from "react";
+import { Navbar } from "../navbar/Navbar";
 
 interface LayoutProps {
   children?: ReactNode;
@@ -7,10 +8,11 @@ interface LayoutProps {
 }
 
 export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
+  const pageTitle = `${title} - Renewability`;
   return (
     <>
       <Head>
-        <title>{title} - Renewability OT</title>
+        <title>{pageTitle}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <link
           rel="icon"
@@ -18,6 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
           href="/assets/icon/favicon/favicon.ico"
         />
       </Head>
+      <Navbar />
       <div>{children}</div>
     </>
   );

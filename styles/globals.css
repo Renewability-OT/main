@@ -1,24 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap");
 
-:root {
-  /* Colors */
-  /* Color Mode HSL(hue, saturation, lightness) */
-  --first-color: "";
-  --button-color: "";
-  --button-color-alt: "";
-  --title-color: "";
-  --text-color: "";
-  --text-color-light: "";
-  --body-color: "";
-  --container-color: #fff;
-  --border-color: "";
-
-  /* Font and Typography */
-  /* .5rem = 8px | 1rem = 16px */
-  --body-font: "Roboto", sans-serif;
+@layer base {
+  body {
+    font-family: "Roboto", sans-serif;
+    background-color: #fefefe;
+  }
 }
 
 * {
@@ -28,11 +17,6 @@
 }
 html {
   scroll-behavior: smooth;
-}
-body,
-button,
-input {
-  font-family: var(--body-font);
 }
 body {
   margin: 0;
