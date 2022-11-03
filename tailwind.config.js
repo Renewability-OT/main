@@ -15,11 +15,15 @@ module.exports = {
         lightBlue: "#36C9C9",
       },
       width: {
-        container: "1280px",
+        container: "1180px",
       },
       boxShadow: {
-        bookButton: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-        darkBookButton: "0px 4px 4px rgba(0, 0, 0, 0.50)",
+        Button: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+        darkButton: "0px 4px 4px rgba(0, 0, 0, 0.50)",
+      },
+      dropShadow: {
+        "3xl": "0px 4px 4px rgba(0, 0, 0, 0.25)",
+        "4xl": "0px 4px 4px rgba(0, 0, 0, 0.4)",
       },
     },
     fontFamily: {
