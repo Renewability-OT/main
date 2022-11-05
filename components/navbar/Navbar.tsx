@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import { Switch } from "../switch/Switch";
 
 export const Navbar: React.FC = () => {
@@ -13,7 +13,7 @@ export const Navbar: React.FC = () => {
           >
             <img
               className="w-6 lg:w-7 mr-1 inline"
-              src="\assets\icon\favicon\icons8-leaf-48.png"
+              src="\assets\icon\logo\icons8-leaf-48.png"
             />
             Renewability OT
           </Link>

@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import "../styles/globals.css";
-import { useState, createContext, SetStateAction, Dispatch } from "react";
+import { useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 export default function App({ Component, pageProps }: AppProps) {
