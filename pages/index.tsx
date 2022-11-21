@@ -1,4 +1,5 @@
 import { Banner } from "../components/banner/Banner";
+import { AboutUs } from "../components/aboutus/AboutUs";
 import { Layout } from "../components/layout/Layout";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Layout title="Home">
         <Banner />
+        <AboutUs />
       </Layout>
     </>
   );

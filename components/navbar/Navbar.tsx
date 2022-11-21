@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
               className="
                 mr-4
               text-lightBlue 
-                font-thin 
+                font-light
                 relative
                 w-fit
                 before:content-['']
@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
               className="
                 mr-4
                 text-lightBlue 
-                font-thin             
+                font-light             
                 relative
                 w-fit
                 before:content-['']
@@ -67,8 +67,8 @@ export const Navbar: React.FC = () => {
             <li
               className="
                 mr-4
-              text-lightBlue 
-                font-thin 
+                text-lightBlue 
+                font-light
                 relative
                 w-fit
                 before:content-['']
@@ -91,7 +91,7 @@ export const Navbar: React.FC = () => {
               className="
                 mr-4
                 text-lightBlue 
-                font-thin
+                font-light
                 relative
                 w-fit
                 before:content-['']
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
             </li>
           </ul>
           <Switch />
-          <button className="bg-lightBlue font-bold text-sm text-[#FFFFFF] px-5 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton">
+          <button className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">
             Book Now
           </button>
         </div>

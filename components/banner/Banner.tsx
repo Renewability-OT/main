@@ -10,19 +10,19 @@ export const Banner = () => {
             Occupational Therapy <br />
             For All Ages
           </p>
-          <p className="text-[22px] drop-shadow-4xl mt-4">
+          <p className="font-medium text-[22px] drop-shadow-4xl mt-4">
             Believing In The Power Of You!
           </p>
           <div className="mt-6 ">
             <Link
               href=""
-              className="text-white font-bold border py-3 px-7 rounded-xl transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton mr-2"
+              className="text-white font-bold border py-3 px-9 rounded-xl transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton mr-2 hover:opacity-60"
             >
               Book Now
             </Link>
             <Link
               href=""
-              className="text-white font-bold border py-3 px-5 rounded-xl transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton"
+              className="text-white font-bold border py-3 px-7 rounded-xl transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
             >
               Our Services
             </Link>

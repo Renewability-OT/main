@@ -13,6 +13,7 @@ module.exports = {
         green: "#36C980",
         pink: "#C9367F",
         lightBlue: "#36C9C9",
+        AboutUsBg: "rgba(54, 201, 201, 0.29)",
       },
       width: {
         container: "1180px",
