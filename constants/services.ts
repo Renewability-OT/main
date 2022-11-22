@@ -3,3 +3,13 @@ export const geriatricOptions = [
     'Improve Coordination',
     'Improve Cognitive Functioning',
 ]
+export const pediatricOptions = [
+    'ADHD',
+    'Autism Spectrum Disorder',
+    'Emotional/Behavioral',
+]
+export const reikiOptions = [
+    'In Home Reiki Session',
+    'Stress Reduction',
+    'Relaxation',
+]

@@ -13,7 +13,7 @@ export const AboutUs = () => {
           <h1 className="mt-[17.61px] text-lightBlue font-bold text-[38px] drop-shadow-3xl">
             About Us
           </h1>
-          <p className="font-medium text-[15px] text-[#707070] dark:text-[#FEFEFE]">
+          <p className="font-medium text-[18px] text-[#707070] dark:text-[#FEFEFE]">
             Who Are We?
           </p>
           <p className="mt-[15px] font-light text-[20px] text-[#2D3436] drop-shadow-3xl dark:text-[#FEFEFE]">
