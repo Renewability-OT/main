@@ -15,6 +15,9 @@ module.exports = {
         lightBlue: "#36C9C9",
         AboutUsBg: "rgba(54, 201, 201, 0.29)",
       },
+      objectPosition: {
+        'centerTop': '0px 25%',
+      },
       width: {
         container: "1180px",
       },
