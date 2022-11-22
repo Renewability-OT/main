@@ -6,7 +6,7 @@ export const AboutUs = () => {
   return (
     <div className="w-full flex justify-center px-12">
       <div className="grid grid-row-2 lg:grid-cols-2 items-center mt-6 w-[1180px] h-full rounded-3xl rounded-br-[300px]">
-        <div className="w-[700px] h-full">
+        <div className="relative top-[10px] w-[700px] h-full">
           <img src="assets\illustrations\Lifesavers-Caretaking-2.png" />
         </div>
         <div className="flex flex-col items-center text-center bg-AboutUsBg ml-8 rounded-r-[30px] rounded-t-[30px] rounded-bl-[150px] w-[500px] h-[400px] rounded-8">
