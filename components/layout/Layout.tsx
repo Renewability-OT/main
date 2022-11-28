@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React, { ReactNode, useEffect, useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
+import { Footer } from "../footer/Footer";
 import { Navbar } from "../navbar/Navbar";
 
 interface LayoutProps {
@@ -27,6 +28,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       </Head>
       <Navbar />
       <div>{children}</div>
+      <Footer />
     </div>
   );
 };

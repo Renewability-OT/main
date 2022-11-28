@@ -10,8 +10,8 @@ export default function Home() {
       <Layout title="Home">
         <Banner />
         <AboutUs />
-        <Services/>
-        <Blog/>
+        <Services />
+        <Blog />
       </Layout>
     </>
   );
