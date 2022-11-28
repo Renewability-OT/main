@@ -12,10 +12,10 @@ interface Props {
     options: Options[]
 }
 
-export const Card: React.FC<Props> = ({title, src, iconSrc, options}) => {
+export const ServiceCard: React.FC<Props> = ({title, src, iconSrc, options}) => {
     return (
     <div className="w-[370px] h-[495px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
-        <img src={src} className="w-full h-[212px] rounded-t-2xl object-cover object-centerTop"/>
+        <img src={src} className="w-full h-[212px] rounded-t-2xl object-cover object-centerTopServices"/>
         <p className="flex items-center justify-center mt-[12px] w-full h-16 text-center font-bold text-[20px]">{title}</p>
         <div className="absolute bottom-20">
         {options.map((n)=>{
@@ -27,8 +27,8 @@ export const Card: React.FC<Props> = ({title, src, iconSrc, options}) => {
             )
         })}
         </div>
-        <div className="w-full flex justify-center absolute bottom-4">
-        <Link href='' className="mt-[20px] border border-pink text-pink font-light text-15px px-4 py-2 rounded-full">Learn More</Link>
+        <div className="w-full flex justify-center absolute bottom-6">
+        <Link href='' className="border border-pink text-pink font-light text-15px px-6 py-1 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn More</Link>
         </div>
     </div>
     )

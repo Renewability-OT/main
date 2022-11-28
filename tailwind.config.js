@@ -16,7 +16,8 @@ module.exports = {
         AboutUsBg: "rgba(54, 201, 201, 0.29)",
       },
       objectPosition: {
-        'centerTop': '0px 25%',
+        'centerTopServices': '0px 25%',
+        'centerTopBlog': '0px 50%',
       },
       width: {
         container: "1180px",
