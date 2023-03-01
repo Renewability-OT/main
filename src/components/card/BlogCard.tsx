@@ -11,7 +11,7 @@ interface Props {
 export const BlogCard: React.FC<Props> = ({title, src, date, desc}) => {
     return (
     <div className="w-[370px] h-[485px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
-        <img src={src} className="w-full h-[245px] rounded-t-2xl object-cover object-centerTopBlog"/>
+        <img alt='blogcard' src={src} className="w-full h-[245px] rounded-t-2xl object-cover object-centerTopBlog"/>
         <p className="flex items-center justify-center leading-5 w-full h-16 text-center font-bold text-[20px]">{title}</p>
         <div className="absolute bottom-20">
                 <p className="ml-8 mr-8 text-[16px] leading-5 text-center font-light">{desc}</p>

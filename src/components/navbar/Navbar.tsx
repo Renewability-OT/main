@@ -12,8 +12,9 @@ export const Navbar: React.FC = () => {
             className="text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
           >
             <img
+                alt='navbaricon'
               className="w-6 lg:w-7 mr-1 inline"
-              src="\assets\icon\logo\icons8-leaf-48.png"
+              src="../../public/assets/icon/logo/icons8-leaf-48.png"
             />
             Renewability OT
           </Link>

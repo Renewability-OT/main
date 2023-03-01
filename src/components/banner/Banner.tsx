@@ -29,7 +29,7 @@ export const Banner = () => {
           </div>
         </div>
         <div className="mt-56">
-          <img src="/assets/illustrations/Lifesavers-Caretaking.png" />
+          <img alt='bannerimg' src="/assets/illustrations/Lifesavers-Caretaking.png" />
         </div>
       </div>
     </div>
