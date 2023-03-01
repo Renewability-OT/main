@@ -13,9 +13,9 @@ export const Footer = () => {
               className="text-white text-[26px] font-bold tracking-wide"
             >
               <img
-                  alt='footerlogo'
+                alt="footerlogo"
                 className="w-6 lg:w-7 mr-1 inline"
-                  src='../../public/assets/icon/logo/icons8-leaf-48.png'
+                src="/assets/icon/logo/icons8-leaf-48.png"
               />
               Renewability OT
             </Link>
@@ -106,8 +106,8 @@ export const Footer = () => {
           </div>
         </div>
         <img
-            alt='footerimg'
-            src='../../public/assets/illustrations/Amigos-Tree.png'
+          alt="footerimg"
+          src="/assets/illustrations/Amigos-Tree.png"
           className="absolute w-96 md:right-2 lg:right-8 xl:right-20 2xl:right-32 mt-[45px] z-10"
         />
       </div>

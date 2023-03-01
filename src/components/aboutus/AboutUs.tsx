@@ -5,11 +5,13 @@ import { BiRightArrowAlt } from "react-icons/bi";
 export const AboutUs = () => {
   return (
     <div className="w-full flex justify-center px-12">
-      <div className="grid grid-row-2 lg:grid-cols-2 items-center mt-6 w-[1180px] h-full rounded-3xl rounded-br-[300px]">
+      <div
+        className="grid grid-row-2 lg:grid-cols-2 items-center mt-6 w-[1180px] h-full rounded-3xl rounded-br-[300px]">
         <div className="relative top-[10px] w-[700px] h-full">
-          <img alt='aboutus' src='../../public/assets/illustrations/Lifesavers-Caretaking-2.png' />
+          <img alt="aboutus" src="/assets/illustrations/Lifesavers-Caretaking-2.png" />
         </div>
-        <div className="flex flex-col items-center text-center bg-AboutUsBg ml-8 rounded-r-[30px] rounded-t-[30px] rounded-bl-[150px] w-[500px] h-[400px] rounded-8">
+        <div
+          className="flex flex-col items-center text-center bg-AboutUsBg ml-8 rounded-r-[30px] rounded-t-[30px] rounded-bl-[150px] w-[500px] h-[400px] rounded-8">
           <h1 className="mt-[17.61px] text-lightBlue font-bold text-[38px] drop-shadow-3xl">
             About Us
           </h1>

@@ -5,16 +5,17 @@ import { Switch } from "../switch/Switch";
 export const Navbar: React.FC = () => {
   return (
     <>
-      <nav className="bg-light dark:bg-dark fixed h-16 lg:h-20 top-0 left-0 right-0 px-12 flex items-center justify-center shadow-lg z-50">
+      <nav
+        className="bg-light dark:bg-dark fixed h-16 lg:h-20 top-0 left-0 right-0 px-12 flex items-center justify-center shadow-lg z-50">
         <div className="flex items-center w-container">
           <Link
             href="/"
             className="text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
           >
             <img
-                alt='navbaricon'
+              alt="navbaricon"
               className="w-6 lg:w-7 mr-1 inline"
-              src="../../public/assets/icon/logo/icons8-leaf-48.png"
+              src="/assets/icon/logo/icons8-leaf-48.png"
             />
             Renewability OT
           </Link>
@@ -113,7 +114,8 @@ export const Navbar: React.FC = () => {
             </li>
           </ul>
           <Switch />
-          <button className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">
+          <button
+            className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">
             Book Now
           </button>
         </div>
