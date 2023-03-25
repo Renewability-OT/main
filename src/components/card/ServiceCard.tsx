@@ -15,17 +15,17 @@ interface Props {
 export const ServiceCard: React.FC<Props> = ({title, src, iconSrc, options}) => {
     return (
         <div
-            className="w-[280px] h-[430px] xs:w-[310px] xs:h-[450px] sm:w-[370px] sm:h-[495px] lg:w-[310px] lg:h-[450px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
+            className="bg-[#FEFEFE] dark:bg-[#383C3E] w-[280px] h-[430px] xs:w-[310px] xs:h-[450px] sm:w-[370px] sm:h-[495px] lg:w-[310px] lg:h-[450px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
             <img alt='servicecard' src={src}
                  className="w-full h-[212px] rounded-t-2xl object-cover object-centerTopServices"/>
-            <p className="flex items-center justify-center mt-2 xs:mt-3 sm:mt-5 lg:mt-3 w-full h-12 px-4 sm:px-6 lg:px-4 text-center font-bold text-[16px] xs:text-[18px] sm:text-[20px] lg:text-[18px]">{title}</p>
+            <p className="text-black dark:text-[#f9f7f7] flex items-center justify-center mt-2 xs:mt-3 sm:mt-5 lg:mt-3 w-full h-12 px-4 sm:px-6 lg:px-4 text-center font-bold text-[16px] xs:text-[18px] sm:text-[20px] lg:text-[18px] leading-6">{title}</p>
             <div className='w-full flex flex-col items-center'>
                 <div className='mt-2 xs:mt-3'>
                     {options.map((n) => {
                         return (
                             <div className="flex items-center w-fit">
                                 <img className='w-6 sm:w-8 lg:w-6 mb-3' src={iconSrc} alt='servicecardimg'/>
-                                <p className="ml-2 mb-3 xs:mb-3 text-xs xs:text-sm sm:text-md lg:text-sm w-fit">{n.label}</p>
+                                <p className="text-black dark:text-[#f9f7f7] ml-2 mb-3 xs:mb-3 text-xs xs:text-sm sm:text-md lg:text-sm w-fit">{n.label}</p>
                             </div>
                         )
                     })}
