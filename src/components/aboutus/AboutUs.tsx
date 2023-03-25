@@ -4,7 +4,7 @@ import {BiRightArrowAlt} from "react-icons/bi";
 
 export const AboutUs = () => {
     return (
-        <div className="w-full flex justify-center lgXl:mt-20 px-6 sm:px-12">
+        <div className="w-full flex justify-center mb-10 lgXl:mb-0 lgXl:mt-20 px-6 sm:px-12">
             <div
                 className="flex flex-col lgXl:flex-row justify-center items-center mt-6 max-w-[1180px] h-full rounded-3xl rounded-br-[300px]">
                 <div className="relative m-auto left-0 right-0 top-[7px]">

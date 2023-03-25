@@ -127,7 +127,7 @@ export const Navbar: React.FC = () => {
                             </button>
                         </div>
                         <div
-                            className="text-[2rem] text-lightBlue absolute top-[22px] right-4 sm:right-12 cursor-pointer md:hidden">
+                            className="text-[2rem] text-lightBlue absolute top-[22px] right-6 sm:right-12 cursor-pointer md:hidden">
                             <button onClick={() => setShowMenu(false)}>
                                 <IoMdClose/>
                             </button>
