@@ -12,7 +12,7 @@ export const AboutUs = () => {
                          className='max-w-[410px] max-h-[210px] xs:max-w-[510px] xs:max-h-[310px] tablet:max-w-[580px] tablet:max-h-[380px] lg:max-w-[560px] lg:max-h-[420px] lgXl:max-w-[590px] lgXl:max-h-[490px] xl:max-w-[650px] xl:max-h-[450px]'/>
                 </div>
                 <div
-                    className="flex flex-col items-center text-center bg-AboutUsBg rounded-3xl lgXl:rounded-bl-[150px] w-full h-full sm:max-w-[700px] sm:max-h-[400px] lgXl:max-w-[500px] lgXl:max-h-[500px]">
+                    className="flex flex-col items-center text-center bg-AboutUsBg rounded-3xl lgXl:rounded-bl-[150px] w-full h-full sm:max-w-[700px] sm:max-h-[400px] lgXl:max-h-[500px]">
                     <h1 className="mt-[17.61px] text-lightBlue font-bold text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">
                         About Us
                     </h1>
