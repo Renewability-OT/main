@@ -1,16 +1,12 @@
-import type { AppProps } from "next/app";
+import type {AppProps} from "next/app";
 import "../../src/styles/globals.css";
-import { useState } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import {ThemeContextProvider} from "../context/ThemeContext";
 
-export default function App({ Component, pageProps }: AppProps) {
-  const [darkMode, setDarkMode] = useState(false);
+export default function App({Component, pageProps}: AppProps) {
 
-  return (
-    <>
-      <ThemeContext.Provider value={{ darkMode, setDarkMode }}>
-        <Component {...pageProps} />
-      </ThemeContext.Provider>
-    </>
-  );
+    return (
+        <ThemeContextProvider>
+            <Component {...pageProps} />
+        </ThemeContextProvider>
+    );
 }

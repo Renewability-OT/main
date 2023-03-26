@@ -20,7 +20,6 @@ export const Blog = () => {
             params: {},
         }).then((response) => {
             // handle success
-            console.log(response.data);
             setPosts(response.data.items)
             setAvatar(response.data.feed.image)
         }).catch(function (error) {
@@ -28,7 +27,6 @@ export const Blog = () => {
             console.log(error);
         })
     }, [])
-    console.log(posts)
     return (
         <div className="w-full h-full flex justify-center">
             <div className="flex flex-col items-center w-full h-full">
@@ -38,7 +36,8 @@ export const Blog = () => {
                     {posts?.map((p: any, i: number) => {
                         if (i <= 2) {
                             return (
-                                <BlogCard src={p.thumbnail}
+                                <BlogCard key={i}
+                                          src={p.thumbnail}
                                           profileSrc={avatar}
                                           link={p.link}
                                           author={p.author}
@@ -51,8 +50,8 @@ export const Blog = () => {
                     })}
                 </div>
                 <Link href=''
-                      className="flex items-center mt-[38px] mb-[38px] border border-lightBlue text-lightBlue text-[14px] xs:text-[18px] px-6 py-3 font-medium rounded-full transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">Continue
-                    Reading <BiRightArrowAlt className="mt-[3px] ml-[1px] h-6 w-6"/></Link>
+                      className="flex items-center mt-[38px] mb-[38px] border border-lightBlue text-lightBlue text-[14px] xs:text-[18px] px-6 py-3 font-medium rounded-full transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">More
+                    Blogs <BiRightArrowAlt className="mt-[3px] ml-[1px] h-6 w-6"/></Link>
             </div>
         </div>
     );

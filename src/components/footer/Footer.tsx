@@ -47,22 +47,6 @@ export const Footer = () => {
                                         Blog
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link
-                                        href=""
-                                        className="hover:underline font-thin text-white"
-                                    >
-                                        Testimonials
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href=""
-                                        className="hover:underline font-thin text-white"
-                                    >
-                                        Media
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
                         <div className="z-50">

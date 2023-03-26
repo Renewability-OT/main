@@ -1,16 +1,18 @@
 import Link from "next/link";
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {Switch} from "../switch/Switch";
 import {IoMdClose, IoMdMenu} from "react-icons/io";
 import {Dynamic} from "../../util/dynamicClassNames";
+import {ThemeContext} from "../../context/ThemeContext";
 
 export const Navbar: React.FC = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
+    const {darkMode} = useContext(ThemeContext)
     return (
         <>
             <header
-                className="w-full bg-light dark:bg-dark fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center shadow-lg z-50">
-                <nav className="flex justify-between items-center w-container">
+                className={Dynamic(darkMode ? 'bg-dark' : 'bg-light', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center shadow-lg z-50")}>
+                < nav className="flex justify-between items-center w-container">
                     <Link
                         href="/"
                         className="sm:w-64 text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
