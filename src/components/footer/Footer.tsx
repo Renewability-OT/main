@@ -25,7 +25,7 @@ export const Footer = () => {
                         </p>
                     </div>
                     <div
-                        className="flex flex-col ml-8 mt-8 xs:grid xs:grid-cols-3 sm:mt-0 sm:ml-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12 2xl:gap-20 z-50">
+                        className="grid grid-cols-2 ml-8 mt-8 xs:grid-cols-3 sm:mt-0 sm:ml-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12 2xl:gap-20 z-50">
                         <div>
                             <h3 className="font-bold tracking-wide text-[16px] text-white">
                                 Explore
