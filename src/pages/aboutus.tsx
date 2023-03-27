@@ -6,7 +6,7 @@ export default function AboutUs() {
         <>
             <Layout title="About Us">
                 <div
-                    className="w-full h-full flex justify-center bg-[url('/assets/photos/cloudbg.jpeg')] bg-cover px-6 sm:px-12">
+                    className="w-full h-full flex justify-center bg-cloudBg bg-cover px-6 sm:px-12">
                     <div
                         className='w-full h-full w-container bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl h-full mt-28 md:mt-32 mb-12'>
                         <div className='w-full flex flex-col justify-center items-center mt-8'>
@@ -21,7 +21,7 @@ export default function AboutUs() {
                         </div>
                         <div
                             className='w-full flex flex-col justify-center items-center px-10 md:px-16 lg:px-24 mt-8 mb-16'>
-                            <p className="font-light text-[14px] sm:text-[18px] text-black dark:text-white indent-10"><span
+                            <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10"><span
                                 className='font-semibold'>ReNewAbility
                                 OT</span> is a
                                 private, in home, Maryland Occupational Therapy practice for <span
@@ -42,7 +42,7 @@ export default function AboutUs() {
                                 compassionate
                                 and brings to the therapeutic setting a hope-filled and fun attitude which is
                                 contagious!</p>
-                            <p className="font-light text-[14px] sm:text-[18px] text-black dark:text-white indent-10 mt-4"><span
+                            <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10 mt-4"><span
                                 className='font-semibold'>ReNewAbility
                                 OT&apos;s</span> mission is to provide each individual the opportunity to live life to
                                 the
@@ -54,7 +54,7 @@ export default function AboutUs() {
                                 full therapeutic programs are developed and caregivers will be instructed on their
                                 implementation. Treatment frequency will depend upon need and follow up visits can use
                                 telehealth/zoom as specific needs change.</p>
-                            <p className="font-light text-[14px] sm:text-[18px] text-black dark:text-white indent-10 mt-4"><span
+                            <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10 mt-4"><span
                                 className='font-semibold'>ReNewAbility
                                 OT</span> for the pediatric client is performed in the home. Diane works closely
                                 with each
@@ -64,7 +64,7 @@ export default function AboutUs() {
                                 development. Diane is an <span
                                     className='font-semibold'>ADHD Certified Clinical Service Provider and a Certified Autism
                                 Spectrum Disorder Clinical Specialist</span>.</p>
-                            <p className="font-light text-[14px] sm:text-[18px] text-black dark:text-white indent-10 mt-4"><span
+                            <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10 mt-4"><span
                                 className='font-semibold'>ReNewAbility
                                 OT</span> for the <span
                                 className='font-semibold'>adult special needs</span> client, they are assessed on how

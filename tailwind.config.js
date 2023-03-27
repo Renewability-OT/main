@@ -25,11 +25,19 @@ module.exports = {
             boxShadow: {
                 Button: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                 darkButton: "0px 4px 4px rgba(0, 0, 0, 0.50)",
-                banner: "10px 10px 22px -7px rgba(0,0,0,0.62)"
+                banner: "10px 10px 22px -7px rgba(0,0,0,0.62)",
+                article: 'rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;'
             },
             dropShadow: {
                 "3xl": "0px 4px 4px rgba(0, 0, 0, 0.25)",
+                '3xlWhite': '2px 2px 10px #FEFEFE',
+                'blog': "10px 10px 4px rgba(0,0,0,0.24)",
                 "4xl": "0px 4px 4px rgba(0, 0, 0, 0.4)"
+            },
+            backgroundImage: {
+                'cloudBg': "url('/assets/photos/cloudbg.jpeg')",
+                'leafBg': "url('/assets/photos/leaf.jpeg')",
+                'leaf2Bg': "url('/assets/photos/leaf2.jpeg')",
             }
         },
         fontFamily: {

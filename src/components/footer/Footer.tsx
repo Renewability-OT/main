@@ -2,7 +2,12 @@ import Link from "next/link";
 import React from "react";
 import {BsFacebook, BsInstagram, BsTwitter} from "react-icons/bs";
 
-export const Footer = () => {
+interface Props {
+    removeFooter?: boolean
+}
+
+export const Footer: React.FC<Props> = ({removeFooter}) => {
+    if (removeFooter) return null
     return (
         <footer className="w-full bg-gradient-to-b from-lightBlue to-green">
             <div className="flex justify-center px-6 xs:px-12">

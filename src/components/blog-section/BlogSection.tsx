@@ -1,32 +1,15 @@
 import Link from "next/link";
-import React, {useEffect, useState} from "react";
+import React, {useContext} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {BlogCard} from "../card/BlogCard";
-import axios from 'axios';
 import moment from 'moment'
-
+import {BlogContext} from "../../context/BlogContext";
 
 const {convert} = require('html-to-text');
 
 export const BlogSection = () => {
-    const [posts, setPosts] = useState<any>()
-    const [avatar, setAvatar] = useState<any>()
-    const mediumURL =
-        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@colinbreeding";
-    useEffect(() => {
-        axios({
-            method: 'get',
-            url: mediumURL,
-            params: {},
-        }).then((response) => {
-            // handle success
-            setPosts(response.data.items)
-            setAvatar(response.data.feed.image)
-        }).catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-    }, [])
+    const {posts, author} = useContext(BlogContext)
+
     return (
         <div className="w-full h-full flex justify-center">
             <div className="flex flex-col items-center w-full h-full">
@@ -38,7 +21,7 @@ export const BlogSection = () => {
                             return (
                                 <BlogCard key={i}
                                           src={p.thumbnail}
-                                          profileSrc={avatar}
+                                          profileSrc={author?.image ?? ''}
                                           link={p.link}
                                           author={p.author}
                                           title={p.title}
