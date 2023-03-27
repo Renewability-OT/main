@@ -48,7 +48,7 @@ export const Navbar: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="">Home</Link>
+                                <Link href="/">Home</Link>
                             </li>
                             <li
                                 className="
@@ -117,7 +117,7 @@ export const Navbar: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="">About Us</Link>
+                                <Link href="/aboutus">About Us</Link>
                             </li>
                         </ul>
                         <div

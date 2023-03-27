@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
 
-export const AboutUs = () => {
+export const AboutUsSection = () => {
     return (
         <div className="w-full flex justify-center mb-10 lgXl:mb-0 lgXl:mt-20 px-6 sm:px-12">
             <div

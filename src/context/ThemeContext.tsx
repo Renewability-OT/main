@@ -17,7 +17,7 @@ export const ThemeContext = createContext<Context>({
 
 export const ThemeContextProvider: React.FC<Props> = ({children}) => {
     const [darkMode, setDarkMode] = useState<boolean>()
-    console.log('darkMode', darkMode)
+
     useEffect(() => {
         const data = localStorage.getItem('theme')
         if (data !== null) {

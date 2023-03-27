@@ -8,7 +8,7 @@ import {
 } from "../../constants/services";
 import {ServiceCard} from "../card/ServiceCard";
 
-export const Services = () => {
+export const ServicesSection = () => {
     return (
         <div className="w-full h-full flex justify-center">
             <div className="flex flex-col items-center w-full h-full bg-gradient-to-r from-lightBlue to-green">

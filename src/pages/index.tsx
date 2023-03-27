@@ -1,18 +1,18 @@
-import { Banner } from "../components/banner/Banner";
-import { AboutUs } from "../components/aboutus/AboutUs";
-import { Layout } from "../components/layout/Layout";
-import { Services } from "../components/services/Services";
-import { Blog } from "../components/blog/Blog";
+import {Layout} from "../components/layout/Layout";
+import {BannerSection} from "../components/banner-section/BannerSection";
+import {AboutUsSection} from "../components/aboutus-section/AboutUsSection";
+import {ServicesSection} from "../components/services-section/ServicesSection";
+import {BlogSection} from "../components/blog-section/BlogSection";
 
 export default function Home() {
-  return (
-    <>
-      <Layout title="Home">
-        <Banner />
-        <AboutUs />
-        <Services />
-        <Blog />
-      </Layout>
-    </>
-  );
+    return (
+        <>
+            <Layout title="Home">
+                <BannerSection/>
+                <AboutUsSection/>
+                <ServicesSection/>
+                <BlogSection/>
+            </Layout>
+        </>
+    );
 }

@@ -8,7 +8,7 @@ import moment from 'moment'
 
 const {convert} = require('html-to-text');
 
-export const Blog = () => {
+export const BlogSection = () => {
     const [posts, setPosts] = useState<any>()
     const [avatar, setAvatar] = useState<any>()
     const mediumURL =

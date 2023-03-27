@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
-export const Banner = () => {
+export const BannerSection = () => {
     return (
-        <div className="w-full h-full flex justify-center px-6 sm:px-12">
+        <div className="w-full h-full flex justify-center px-6 sm:px-12 mt-28 md:mt-32">
             <div
-                className="w-full flex flex-col items-center mt-24 md:mt-32 max-w-[1180px] h-[520px] sm:h-[540px] tablet:h-[640px] lg:h-[680px] rounded-3xl lgXl:rounded-br-[300px] bg-gradient-to-r from-green to-lightBlue shadow-banner">
+                className="w-full flex flex-col items-center max-w-[1180px] h-[520px] sm:h-[540px] tablet:h-[640px] lg:h-[680px] rounded-3xl lgXl:rounded-br-[300px] bg-gradient-to-r from-green to-lightBlue shadow-banner">
                 <div
                     className="w-full flex flex-col flex-1 items-center lgXl:items-start text-center mt-16 xs:mt-12 tablet:mt-16 lgXl:mt-20">
                     <div className="w-[90%] lgXl:w-[50%] lgXl:ml-12 flex flex-col items-center z-10">
