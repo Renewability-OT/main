@@ -4,7 +4,7 @@ import React from "react";
 export default function AboutUs() {
     return (
         <>
-            <Layout title="Home">
+            <Layout title="About Us">
                 <div
                     className="w-full h-full flex justify-center bg-[url('/assets/photos/cloudbg.jpeg')] bg-cover px-6 sm:px-12">
                     <div
