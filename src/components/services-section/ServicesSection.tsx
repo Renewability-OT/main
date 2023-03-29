@@ -32,7 +32,7 @@ export const ServicesSection = () => {
                         options={pediatricOptions.map((t) => ({label: t}))}
                     />
                     <ServiceCard
-                        src="assets/photos/reiki.jpeg"
+                        src="assets/photos/reiki2.jpeg"
                         title="REIKI"
                         iconSrc="assets/icon/card/card-check.png"
                         options={reikiOptions.map((t) => ({label: t}))}
