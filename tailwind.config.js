@@ -13,6 +13,7 @@ module.exports = {
                 green: "#36C980",
                 pink: "#C9367F",
                 lightBlue: "#36C9C9",
+                superLightBlue: "#C9EFEE",
                 AboutUsBg: "rgba(54, 201, 201, 0.29)"
             },
             objectPosition: {
@@ -26,7 +27,8 @@ module.exports = {
                 Button: "0px 4px 4px rgba(0, 0, 0, 0.25)",
                 darkButton: "0px 4px 4px rgba(0, 0, 0, 0.50)",
                 banner: "10px 10px 22px -7px rgba(0,0,0,0.62)",
-                article: 'rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;'
+                article: 'rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset',
+                serviceInfo: "0px -9px 13px -7px rgba(0,0,0,0.15)",
             },
             dropShadow: {
                 "3xl": "0px 4px 4px rgba(0, 0, 0, 0.25)",
