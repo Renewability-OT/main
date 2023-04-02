@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import {BsFacebook, BsInstagram, BsTwitter} from "react-icons/bs";
+import {BsFacebook, BsInstagram} from "react-icons/bs";
 
 interface Props {
     removeFooter?: boolean
@@ -38,7 +38,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                             <ul className="grid">
                                 <li>
                                     <Link
-                                        href=""
+                                        href="/services"
                                         className="hover:underline font-thin text-white"
                                     >
                                         Services
@@ -46,7 +46,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                                 </li>
                                 <li>
                                     <Link
-                                        href=""
+                                        href="/blog"
                                         className="hover:underline font-thin text-white"
                                     >
                                         Blog
@@ -61,7 +61,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                             <ul>
                                 <li>
                                     <Link
-                                        href=""
+                                        href="/aboutus"
                                         className="hover:underline font-thin text-white"
                                     >
                                         About
@@ -82,13 +82,10 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                                 Follow Us
                             </h3>
                             <div className="flex">
-                                <Link href="https://www.facebook.com" className="mr-2">
+                                <Link href="https://www.facebook.com/dgubisch/" className="mr-2">
                                     <BsFacebook size={20} color="white"/>
                                 </Link>
-                                <Link href="https://www.twitter.com" className="mr-2">
-                                    <BsTwitter size={20} color="white"/>
-                                </Link>
-                                <Link href="https://www.instagram.com" className="mr-2">
+                                <Link href="https://www.instagram.com/dgubisch/?hl=en" className="mr-2">
                                     <BsInstagram size={20} color="white"/>
                                 </Link>
                             </div>

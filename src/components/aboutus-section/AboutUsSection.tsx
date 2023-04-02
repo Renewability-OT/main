@@ -27,7 +27,7 @@ export const AboutUsSection = () => {
                         Reiki, Therapeutic Massage, and spiritual counseling.
                     </p>
                     <Link
-                        href=""
+                        href="/aboutus"
                         className="flex items-center justify-center mt-[8px] mb-6 border border-lightBlue w-[150px] h-[38px] lg:w-[160px] lg:h-[45px] rounded-full text-lightBlue font-medium text-[16px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
                     >
                         Learn More

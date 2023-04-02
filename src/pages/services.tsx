@@ -1,9 +1,17 @@
-import React from "react";
+import React, {useRef} from "react";
 import {Layout} from "../components/layout/Layout";
-import Link from "next/link";
 
 export default function Services() {
+    const geriatric = useRef(null)
+    const pediatric = useRef(null)
+    const reiki = useRef(null)
 
+    const scrollToSection = (elementRef: any) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop - 80,
+            behavior: 'smooth',
+        })
+    }
     return (
         <>
             <Layout title="Services">
@@ -65,9 +73,10 @@ export default function Services() {
                                             </div>
                                         </div>
                                         <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                                            <Link href=''
-                                                  className="border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
-                                                More</Link>
+                                            <a onClick={() => scrollToSection(geriatric)}
+                                               className="cursor-pointer border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
+                                                More
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -122,9 +131,10 @@ export default function Services() {
                                             </div>
                                         </div>
                                         <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                                            <Link href=''
-                                                  className="border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
-                                                More</Link>
+                                            <a onClick={() => scrollToSection(pediatric)}
+                                               className="cursor-pointer border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
+                                                More
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -178,9 +188,10 @@ export default function Services() {
                                             </div>
                                         </div>
                                         <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                                            <Link href=''
-                                                  className="border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
-                                                More</Link>
+                                            <a onClick={() => scrollToSection(reiki)}
+                                               className="cursor-pointer border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
+                                                More
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -188,7 +199,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full h-full bg-superLightBlue'>
+                <div ref={geriatric} className='w-full h-full bg-superLightBlue'>
                     <div
                         className='w-full h-full bg-light dark:bg-dark shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6 px-3 md:p-12'>
                         <div className='w-full xl:w-container h-full'>
@@ -245,7 +256,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full h-full bg-white dark:bg-dark'>
+                <div ref={pediatric} className='w-full h-full bg-white dark:bg-dark'>
                     <div
                         className='w-full h-full bg-superLightBlue shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6 px-3 md:p-12'>
                         <div className='w-full xl:w-container h-full'>
@@ -302,7 +313,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div className='w-full h-full bg-superLightBlue'>
+                <div ref={reiki} className='w-full h-full bg-superLightBlue'>
                     <div
                         className='w-full h-full bg-light dark:bg-dark shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6 px-3 md:p-12'>
                         <div className='w-full xl:w-container h-full'>
