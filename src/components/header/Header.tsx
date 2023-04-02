@@ -5,7 +5,7 @@ import {IoMdClose, IoMdMenu} from "react-icons/io";
 import {Dynamic} from "../../util/dynamicClassNames";
 import {ThemeContext} from "../../context/ThemeContext";
 
-export const Navbar: React.FC = () => {
+export const Header: React.FC = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const {darkMode} = useContext(ThemeContext)
     return (
@@ -71,7 +71,7 @@ export const Navbar: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="">Services</Link>
+                                <Link href="/services">Services</Link>
                             </li>
                             <li
                                 className="
@@ -124,7 +124,7 @@ export const Navbar: React.FC = () => {
                             className="md:ml-auto flex flex-col md:flex-row gap-4 md:gap-0 lg:gap-2 items-center justify-center mb-12 md:mb-0">
                             <Switch/>
                             <button
-                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-[20px] transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">
+                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">
                                 Book Now
                             </button>
                         </div>

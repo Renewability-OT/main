@@ -21,13 +21,13 @@ export const BannerSection = () => {
                             className="w-full flex flex-col xs:flex-row justify-center items-center mt-4 lg:mt-3 gap-2">
                             <Link
                                 href=""
-                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-2xl transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
+                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
                             >
                                 Book Now
                             </Link>
                             <Link
-                                href=""
-                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-2xl transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
+                                href="/services"
+                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
                             >
                                 Our Services
                             </Link>

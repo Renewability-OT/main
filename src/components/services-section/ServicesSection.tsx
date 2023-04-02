@@ -21,25 +21,25 @@ export const ServicesSection = () => {
                 <div className="flex flex-col lg:flex-row gap-6 mt-[16px]">
                     <ServiceCard
                         src="assets/photos/geriatric.jpeg"
-                        title="GERIATRIC CARE AND ADULTS WITH SPECIAL NEEDS"
+                        title="Geriatric Care And Adults With Special Needs"
                         iconSrc="assets/icon/card/card-check.png"
                         options={geriatricOptions.map((t) => ({label: t}))}
                     />
                     <ServiceCard
                         src="assets/photos/pediatric.jpeg"
-                        title="PEDIATRIC NEEDS"
+                        title="Pediatric Care"
                         iconSrc="assets/icon/card/card-check.png"
                         options={pediatricOptions.map((t) => ({label: t}))}
                     />
                     <ServiceCard
                         src="assets/photos/reiki2.jpeg"
-                        title="REIKI"
+                        title="Reiki"
                         iconSrc="assets/icon/card/card-check.png"
                         options={reikiOptions.map((t) => ({label: t}))}
                     />
                 </div>
                 <Link
-                    href=""
+                    href="/services"
                     className="flex items-center mt-[38px] mb-[38px] border border-[#FEFEFE] dark:border-[#383C3E] text-[#FEFEFE] dark:text-[#383C3E] text-[14px] xs:text-[18px] px-6 py-3 font-medium rounded-full transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
                 >
                     More Info <BiRightArrowAlt className="mt-0 xs:mt-[2px] ml-[1px] h-6 w-6"/>

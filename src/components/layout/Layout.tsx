@@ -2,7 +2,7 @@ import Head from "next/head";
 import React, {ReactNode, useEffect, useContext} from "react";
 import {ThemeContext} from "../../context/ThemeContext";
 import {Footer} from "../footer/Footer";
-import {Navbar} from "../navbar/Navbar";
+import {Header} from "../header/Header";
 
 interface LayoutProps {
     children?: ReactNode;
@@ -27,7 +27,7 @@ export const Layout: React.FC<LayoutProps> = ({children, title, removeFooter}) =
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
             </Head>
-            <Navbar/>
+            <Header/>
             <div>{children}</div>
             <Footer removeFooter={removeFooter}/>
         </div>
