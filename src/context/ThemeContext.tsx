@@ -11,8 +11,7 @@ interface Context {
 
 export const ThemeContext = createContext<Context>({
     darkMode: undefined,
-    toggleDarkMode: () => {
-    }
+    toggleDarkMode: () => false
 });
 
 export const ThemeContextProvider: React.FC<Props> = ({children}) => {

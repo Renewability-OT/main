@@ -4,8 +4,9 @@ import {BiRightArrowAlt} from "react-icons/bi";
 import {BlogCard} from "../card/BlogCard";
 import moment from 'moment'
 import {BlogContext} from "../../context/BlogContext";
+import {Post} from "../../context/BlogContext";
 
-const {convert} = require('html-to-text');
+import {convert} from 'html-to-text';
 
 export const BlogSection = () => {
     const {posts, author} = useContext(BlogContext)
@@ -16,7 +17,7 @@ export const BlogSection = () => {
                 <h1 className="mt-[24px] font-bold dark:text-white text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Blog</h1>
                 <p className="font-medium text-[14px] sm:text-[18px] text-[#707070]">Most Recent Posts</p>
                 <div className="flex flex-col lg:flex-row gap-6 mt-[16px]">
-                    {posts?.map((p: any, i: number) => {
+                    {posts?.map((p: Post, i: number) => {
                         if (i <= 2) {
                             return (
                                 <BlogCard key={i}

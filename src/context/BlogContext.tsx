@@ -41,7 +41,7 @@ export const BlogContext = createContext<Context>({
 
 export const BlogContextProvider: React.FC<Props> = ({children}) => {
     const [posts, setPosts] = useState<any>()
-    const [author, setAuthor] = useState<any>()
+    const [author, setAuthor] = useState<Author>()
     const [featuredArticle, setFeaturedArticle] = useState()
     const mediumURL =
         "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@colinbreeding";

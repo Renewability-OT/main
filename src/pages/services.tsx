@@ -486,7 +486,7 @@ export default function Services() {
                                     className='w-full flex flex-col justify-center items-center px-5 lg:px-10 py-10'>
                                     <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10">Reiki
                                         is using the universal life force energy to
-                                        alleviate stress from the body to enable the body's own natural healing
+                                        alleviate stress from the body to enable the body&apos;s own natural healing
                                         abilities to restore balance to the mind, body and spirit. </p>
                                     <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10">Diane
                                         Gubisch, PhD, OTR/L is a USUI and KARUNA Reiki Master/Teacher for over 20 years,

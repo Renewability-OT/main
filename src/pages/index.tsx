@@ -1,3 +1,4 @@
+import React from 'react';
 import {Layout} from "../components/layout/Layout";
 import {BannerSection} from "../components/banner-section/BannerSection";
 import {AboutUsSection} from "../components/aboutus-section/AboutUsSection";
