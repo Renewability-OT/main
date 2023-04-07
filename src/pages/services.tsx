@@ -2,14 +2,15 @@ import React, {useRef} from "react";
 import {Layout} from "../components/layout/Layout";
 
 export default function Services() {
-    const geriatric = useRef(null)
-    const pediatric = useRef(null)
-    const reiki = useRef(null)
+    const geriatric: React.MutableRefObject<null> = useRef(null)
+    const pediatric: React.MutableRefObject<null> = useRef(null)
+    const reiki: React.MutableRefObject<null> = useRef(null)
 
-    const scrollToSection = (elementRef: any) => {
+    const scrollToSection = (elementRef: React.MutableRefObject<null>) => {
         window.scrollTo({
-            top: elementRef.current.offsetTop - 80,
             behavior: 'smooth',
+            // @ts-ignore
+            top: elementRef.current!.offsetTop - 80,
         })
     }
     return (

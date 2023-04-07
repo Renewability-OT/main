@@ -30,19 +30,31 @@ export interface Author {
 interface Context {
     posts: Post[]
     author?: Author
-    featuredArticle?: Post
 }
 
 export const BlogContext = createContext<Context>({
     posts: [],
     author: undefined,
-    featuredArticle: undefined
 })
 
+const initialState: Post[] = [
+    {
+        author: '',
+        categories: [],
+        content: '',
+        description: '',
+        enclosure: {},
+        guid: '',
+        link: '',
+        pubDate: '',
+        thumbnail: '',
+        title: '',
+    }
+]
+
 export const BlogContextProvider: React.FC<Props> = ({children}) => {
-    const [posts, setPosts] = useState<any>()
+    const [posts, setPosts] = useState<Post[]>(initialState)
     const [author, setAuthor] = useState<Author>()
-    const [featuredArticle, setFeaturedArticle] = useState()
     const mediumURL =
         "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@colinbreeding";
     useEffect(() => {
@@ -60,14 +72,8 @@ export const BlogContextProvider: React.FC<Props> = ({children}) => {
         })
     }, [])
 
-    useEffect(() => {
-        if (posts) {
-            setFeaturedArticle(posts[0])
-        }
-    }, [posts])
-
     return (
-        <BlogContext.Provider value={{posts, author, featuredArticle}}>
+        <BlogContext.Provider value={{posts, author}}>
             {children}
         </BlogContext.Provider>
     )

@@ -43,7 +43,7 @@ module.exports = {
             }
         },
         fontFamily: {
-            roboto: "Roboto"
+            'Roboto': ['Roboto', 'sans-serif']
         },
         screens: {
             xxs: "320px",

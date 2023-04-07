@@ -3,10 +3,10 @@ import React, {useContext} from "react";
 import {BlogContext} from "../context/BlogContext";
 import moment from "moment/moment";
 import {ArticleCard} from "../components/card/ArticleCard";
+import {convert} from "html-to-text";
 
 export default function Blog() {
     const {posts, author} = useContext(BlogContext)
-    const {convert} = require('html-to-text');
 
     return (
         <>
