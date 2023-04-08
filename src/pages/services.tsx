@@ -1,17 +1,18 @@
-import React, {useRef} from "react";
+import React from "react";
 import {Layout} from "../components/layout/Layout";
 
 export default function Services() {
-    const geriatric: React.MutableRefObject<null> = useRef(null)
-    const pediatric: React.MutableRefObject<null> = useRef(null)
-    const reiki: React.MutableRefObject<null> = useRef(null)
 
-    const scrollToSection = (elementRef: React.MutableRefObject<null>) => {
-        window.scrollTo({
-            behavior: 'smooth',
-            // @ts-ignore
-            top: elementRef.current!.offsetTop - 80,
-        })
+    const scrollToSection = (id: string | undefined) => {
+        if (id !== undefined) {
+            const element = document.getElementById(id);
+            if (element) {
+                window.scrollTo({
+                    behavior: 'smooth',
+                    top: element.offsetTop - 80,
+                })
+            }
+        }
     }
     return (
         <>
@@ -74,7 +75,7 @@ export default function Services() {
                                             </div>
                                         </div>
                                         <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                                            <a onClick={() => scrollToSection(geriatric)}
+                                            <a onClick={() => scrollToSection('geriatric')}
                                                className="cursor-pointer border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
                                                 More
                                             </a>
@@ -130,7 +131,7 @@ export default function Services() {
                                             </div>
                                         </div>
                                         <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                                            <a onClick={() => scrollToSection(pediatric)}
+                                            <a onClick={() => scrollToSection('pediatric')}
                                                className="cursor-pointer border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
                                                 More
                                             </a>
@@ -187,7 +188,7 @@ export default function Services() {
                                             </div>
                                         </div>
                                         <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                                            <a onClick={() => scrollToSection(reiki)}
+                                            <a onClick={() => scrollToSection('reiki')}
                                                className="cursor-pointer border border-pink text-pink font-light text-[13px] xs:text-[16px] px-6 py-1 mt-4 mb-8 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
                                                 More
                                             </a>
@@ -198,7 +199,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div ref={geriatric} className='w-full h-full bg-green'>
+                <div id='geriatric' className='w-full h-full bg-green'>
                     <div
                         className='w-full h-full bg-white dark:bg-dark shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6'>
                         <div className='w-full h-full px-5 sm:px-10'>
@@ -325,7 +326,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div ref={pediatric} className='w-full h-full bg-white dark:bg-dark'>
+                <div id='pediatric' className='w-full h-full bg-white dark:bg-dark'>
                     <div
                         className='w-full h-full bg-gradient-to-r from-lightBlue to-green shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6'>
                         <div className='w-full h-full px-5 sm:px-10'>
@@ -463,7 +464,7 @@ export default function Services() {
                         </div>
                     </div>
                 </div>
-                <div ref={reiki} className='w-full h-full bg-gradient-to-r from-lightBlue to-green'>
+                <div id='reiki' className='w-full h-full bg-gradient-to-r from-lightBlue to-green'>
                     <div
                         className='w-full h-full bg-light dark:bg-dark shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6 px-3 md:p-12'>
                         <div className='w-full xl:w-container h-full'>
