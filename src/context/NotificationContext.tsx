@@ -13,6 +13,7 @@ interface Context {
 export const NotificationContext = createContext<Context>({
     notification: {message: '', type: NotificationType.Success},
     setNotification: () => {
+        // do nothing
     },
 })
 
