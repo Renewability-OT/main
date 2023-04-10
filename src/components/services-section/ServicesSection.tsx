@@ -13,7 +13,7 @@ export const ServicesSection = () => {
                     See What We Have To Offer
                 </p>
                 <div
-                    className='flex flex-col lg:flex-row justify-center items-center gap-4 w-full lg:w-[1000px] xl:w-[1150px] mt-[38px]'>
+                    className='flex flex-col lg:flex-row justify-center items-center gap-4 w-full lg:w-[1000px] xl:w-[1150px] mt-[38px] px-4 lg:px-0'>
                     <div
                         className="w-full max-w-[400px] h-full px-6 bg-white/30 rounded-2xl">
                         <div className='w-full h-full flex flex-col justify-center items-center mt-8'>
@@ -23,7 +23,7 @@ export const ServicesSection = () => {
                             </div>
                             <div className='w-full h-full flex justify-center items-center'>
                                 <div className='w-full'>
-                                    <p className="w-full flex items-center justify-center h-fit lg:h-[60px] xl:h-[80px] mt-4 text-center text-black text-[22px] xl:text-[28px] font-semibold leading-7 xl:leading-9">Geriatric
+                                    <p className="w-full flex items-center justify-center h-fit lg:h-[60px] xl:h-[80px] mt-4 text-center text-black text-[18px] xl:text-[24px] font-semibold leading-6 xl:leading-8">Geriatric
                                         Care And Adults With Special Needs</p>
                                     <div className='w-full flex justify-center'>
                                         <div className='mt-4'>
@@ -81,7 +81,7 @@ export const ServicesSection = () => {
                             </div>
                             <div className='w-full h-full flex justify-center items-center'>
                                 <div className='w-full'>
-                                    <p className="w-full h-fit lg:h-[60px] xl:h-[80px] flex items-center justify-center mt-4 text-black text-[22px] xl:text-[28px] font-bold leading-9">Pediatric
+                                    <p className="w-full h-fit lg:h-[60px] xl:h-[80px] flex items-center justify-center mt-4 text-black text-[18px] xl:text-[24px] font-semibold leading-6 xl:leading-8">Pediatric
                                         Care</p>
                                     <div className='w-full flex justify-center'>
                                         <div className='mt-4'>
@@ -139,7 +139,7 @@ export const ServicesSection = () => {
                             </div>
                             <div className='w-full h-full flex justify-center items-center'>
                                 <div className='w-full'>
-                                    <p className="w-full mt-4 flex items-center justify-center h-fit lg:h-[60px] xl:h-[80px] text-center text-black text-[22px] xl:text-[28px] font-bold leading-9">Reiki</p>
+                                    <p className="w-full mt-4 flex items-center justify-center h-fit lg:h-[60px] xl:h-[80px] text-center text-black text-[18px] xl:text-[24px] font-semibold leading-6 xl:leading-8">Reiki</p>
                                     <div className='w-full flex justify-center items-center'>
                                         <div className='mt-4'>
                                             <div className="flex items-center w-fit">

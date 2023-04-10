@@ -1,12 +1,15 @@
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 import {BsFacebook, BsInstagram} from "react-icons/bs";
+import {ContactForm} from "../forms/ContactForm";
 
 interface Props {
     removeFooter?: boolean
 }
 
 export const Footer: React.FC<Props> = ({removeFooter}) => {
+    const [showModal, setShowModal] = useState(false)
+
     if (removeFooter) return null
     return (
         <footer className="w-full bg-gradient-to-b from-lightBlue to-green">
@@ -68,16 +71,19 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link
-                                        href=""
+                                    <button
+                                        onClick={() => setShowModal(true)}
                                         className="hover:underline font-thin text-white"
                                     >
                                         Contact Us
-                                    </Link>
+                                    </button>
+                                    {!showModal ||
+                                        <ContactForm showModal={showModal}
+                                                     setShowModal={() => setShowModal(false)}/>}
                                 </li>
                             </ul>
                         </div>
-                        <div className="z-50">
+                        <div className="z-20">
                             <h3 className="w-24 font-bold tracking-wide text-[16px] text-white mb-1">
                                 Follow Us
                             </h3>

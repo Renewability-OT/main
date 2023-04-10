@@ -13,7 +13,15 @@ module.exports = {
                 green: "#36C980",
                 pink: "#C9367F",
                 lightBlue: "#36C9C9",
-                superLightBlue: "#C9EFEE",
+                darkBlue: "#2eaaa8",
+                notificationGreen: 'rgb(240 253 244)',
+                notificationRed: 'rgb(254 242 242)',
+                notificationIconGreen: 'rgb(74 222 128)',
+                notificationIconRed: 'rgb(248 113 113)',
+                notificationIconHoverRed: 'rgb(254 226 226)',
+                notificationIconHoverGreen: 'rgb(220 252 231)',
+                notificationTextGreen: 'rgb(22 163 74)',
+                notificationTextRed: 'rgb(220 38 38)',
                 AboutUsBg: "rgba(54, 201, 201, 0.29)"
             },
             objectPosition: {

@@ -3,6 +3,7 @@ import React, {ReactNode, useEffect, useContext} from "react";
 import {ThemeContext} from "../../context/ThemeContext";
 import {Footer} from "../footer/Footer";
 import {Header} from "../header/Header";
+import {Notification} from "../notification/Notification";
 
 interface LayoutProps {
     children?: ReactNode;
@@ -28,6 +29,7 @@ export const Layout: React.FC<LayoutProps> = ({children, title, removeFooter}) =
                 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
             </Head>
             <Header/>
+            <Notification/>
             <div>{children}</div>
             <Footer removeFooter={removeFooter}/>
         </div>

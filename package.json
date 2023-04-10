@@ -19,18 +19,22 @@
     "production:clean": "rimraf out/"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@heroicons/react": "^2.0.17",
     "@types/html-to-text": "^9.0.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.24",
     "@types/react-dom": "18.0.8",
     "axios": "^1.3.4",
+    "formik": "^2.2.9",
     "html-to-text": "^9.0.5",
     "moment": "^2.29.4",
     "next": "13.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "typescript": "4.8.4"
+    "typescript": "4.8.4",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.57.0",

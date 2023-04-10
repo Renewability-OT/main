@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, {useContext, useState} from "react";
 import {Switch} from "../switch/Switch";
 import {IoMdClose, IoMdMenu} from "react-icons/io";
-import {Dynamic} from "../../util/dynamicClassNames";
+import {ClassNames} from "../../util/ClassNames";
 import {ThemeContext} from "../../context/ThemeContext";
 
 export const Header: React.FC = () => {
@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
     return (
         <>
             <header
-                className={Dynamic(darkMode ? 'bg-dark' : 'bg-light', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center shadow-lg z-50")}>
+                className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center shadow-lg z-50")}>
                 < nav className="flex justify-between items-center w-container">
                     <Link
                         href="/"
@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
                         Renewability OT
                     </Link>
                     <div
-                        className={Dynamic(showMenu ? "right-0" : "right-[-100%]", "max-md:flex max-md:flex-col-reverse max-md:justify-end max-md:fixed max-md:bg-light max-md:dark:bg-dark max-md:top-0 max-md:w-full max-md:h-full max-md:px-8 max-md:pt-3 max-md:pb-14 max-md:uppercase max-md:transition-all max-md:duration-300 max-md:ease-in-out md:w-full md:flex")}>
+                        className={ClassNames(showMenu ? "right-0" : "right-[-100%]", "max-md:flex max-md:flex-col-reverse max-md:justify-end max-md:fixed max-md:bg-light max-md:dark:bg-dark max-md:top-0 max-md:w-full max-md:h-full max-md:px-8 max-md:pt-3 max-md:pb-14 max-md:uppercase max-md:transition-all max-md:duration-300 max-md:ease-in-out md:w-full md:flex")}>
                         <ul className="flex flex-col items-center max-md:text-xl gap-8 md:gap-0 md:flex-row">
                             <li
                                 className="
@@ -124,7 +124,7 @@ export const Header: React.FC = () => {
                             className="md:ml-auto flex flex-col md:flex-row gap-4 md:gap-0 lg:gap-2 items-center justify-center mb-12 md:mb-0">
                             <Switch/>
                             <button
-                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60">
+                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg transition ease-in-out duration-300 shadow-Button hover:bg-darkBlue">
                                 Book Now
                             </button>
                         </div>

@@ -35,7 +35,7 @@ export default function Services() {
                                 </div>
                                 <div className='w-full h-full flex justify-center items-center'>
                                     <div className='w-full'>
-                                        <p className="w-full h-fit flex items-center justify-center lg:h-[60px] xl:h-[80px] mt-4 text-center text-black text-[22px] xl:text-[28px] font-semibold leading-7 xl:leading-9">Geriatric
+                                        <p className="w-52 xl:w-full m-auto h-fit flex items-center justify-center lg:h-[60px] xl:-[80px] mt-4 text-center text-black text-[18px] xl:text-[24px] font-semibold leading-6 xl:leading-8">Geriatric
                                             Care And Adults With Special Needs</p>
                                         <div className='w-full h-full flex justify-center'>
                                             <div className='mt-4'>
@@ -93,7 +93,7 @@ export default function Services() {
                                 </div>
                                 <div className='w-full h-full flex justify-center items-center'>
                                     <div className='w-full'>
-                                        <p className="w-full h-fit lg:h-[60px] xl:h-[80px] flex items-center justify-center mt-4 text-black text-[22px] xl:text-[28px] font-bold leading-9">Pediatric
+                                        <p className="w-52 xl:w-full m-auto h-fit lg:h-[60px] xl:h-[80px] flex items-center justify-center mt-4 text-black text-[18px] xl:text-[24px] font-semibold leading-6 xl:leading-8">Pediatric
                                             Care</p>
                                         <div className='w-full flex justify-center'>
                                             <div className='mt-4'>
@@ -149,7 +149,7 @@ export default function Services() {
                                 </div>
                                 <div className='w-full h-full flex justify-center items-center'>
                                     <div className='w-full'>
-                                        <p className="w-full mt-4 flex items-center justify-center h-fit lg:h-[60px] xl:h-[80px] text-center text-black text-[22px] xl:text-[28px] font-bold leading-9">Reiki</p>
+                                        <p className="w-52 xl:w-full m-auto mt-4 flex items-center justify-center h-fit lg:h-[60px] xl:h-[80px] text-center text-black text-[18px] xl:text-[24px] font-semibold leading-6 xl:leading-8">Reiki</p>
                                         <div className='w-full flex justify-center items-center'>
                                             <div className='mt-4'>
                                                 <div className="flex items-center w-fit">
@@ -201,9 +201,9 @@ export default function Services() {
                 </div>
                 <div id='geriatric' className='w-full h-full bg-green'>
                     <div
-                        className='w-full h-full bg-white dark:bg-dark shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6'>
+                        className='w-full h-full bg-white dark:bg-dark flex flex-col justify-center items-center py-6'>
                         <div className='w-full h-full px-5 sm:px-10'>
-                            <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black dark:text-white text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9 drop-shadow-blog px-2">Geriatric
+                            <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black dark:text-white text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9 px-2">Geriatric
                                 Care And Adults With Special Needs</p>
                             <p className="font-medium text-center text-[14px] sm:text-[18px] text-[#707070] mb-4">
                                 *Subtitle Goes Here*
@@ -328,9 +328,9 @@ export default function Services() {
                 </div>
                 <div id='pediatric' className='w-full h-full bg-white dark:bg-dark'>
                     <div
-                        className='w-full h-full bg-gradient-to-r from-lightBlue to-green shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6'>
+                        className='w-full h-full bg-gradient-to-r from-lightBlue to-green flex flex-col justify-center items-center py-6'>
                         <div className='w-full h-full px-5 sm:px-10'>
-                            <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9 drop-shadow-blog">Pediatric
+                            <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9">Pediatric
                                 Care</p>
                             <p className="font-medium text-center text-[14px] sm:text-[18px] text-[#707070] mb-4">
                                 *Subtitle Goes Here*
@@ -466,9 +466,9 @@ export default function Services() {
                 </div>
                 <div id='reiki' className='w-full h-full bg-gradient-to-r from-lightBlue to-green'>
                     <div
-                        className='w-full h-full bg-light dark:bg-dark shadow-serviceInfo rounded-t-[40px] lg:rounded-t-[80px] flex flex-col justify-center items-center py-6 px-3 md:p-12'>
+                        className='w-full h-full bg-light dark:bg-dark flex flex-col justify-center items-center py-6 px-3 md:p-12'>
                         <div className='w-full xl:w-container h-full'>
-                            <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black dark:text-white text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9 drop-shadow-blog">Reiki</p>
+                            <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black dark:text-white text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9">Reiki</p>
                             <p className="font-medium text-center text-[14px] sm:text-[18px] text-[#707070] mb-4">
                                 Stress Reduction and Relaxation
                             </p>
