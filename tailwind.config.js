@@ -51,7 +51,7 @@ module.exports = {
             }
         },
         fontFamily: {
-            'Roboto': ['Roboto', 'sans-serif']
+            'Ubuntu': ['Ubuntu', 'sans-serif']
         },
         screens: {
             xxs: "320px",
