@@ -38,13 +38,9 @@ export default function Services() {
                                     <div className='w-full flex justify-center items-center mt-auto mb-auto'>
                                         <Fade direction='right'>
                                             <div
-                                                className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center'>
-                                                <img alt='portrait' src='/assets/photos/geriatric3.jpeg'
-                                                     className='hidden md:block md:relative bottom-10 left-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
-                                                <img alt='portrait' src='/assets/photos/geriatric.jpeg'
-                                                     className='relative md:top-10 z-20 rounded-xl w-64 h-52 md:w-56 md:h-40 lg:w-72 lg:h-56 shadow-banner'/>
+                                                className='w-full h-fit flex justify-center items-center'>
                                                 <img alt='portrait' src='/assets/photos/geriatric2.jpeg'
-                                                     className='hidden md:block md:relative bottom-10 right-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
+                                                     className='w-[400px] h-[300px] rounded-xl shadow-banner'/>
                                             </div>
                                         </Fade>
                                     </div>
@@ -171,13 +167,9 @@ export default function Services() {
                                     <div className='w-full flex justify-center items-center mt-auto mb-auto'>
                                         <Fade direction='right'>
                                             <div
-                                                className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center'>
-                                                <img alt='portrait' src='/assets/photos/pediatric3.jpeg'
-                                                     className='hidden md:block md:relative bottom-10 left-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
-                                                <img alt='portrait' src='/assets/photos/pediatric.jpeg'
-                                                     className='relative md:top-10 z-20 rounded-xl w-64 h-52 md:w-56 md:h-40 lg:w-72 lg:h-56 shadow-banner'/>
+                                                className='w-full h-fit flex justify-center items-center'>
                                                 <img alt='portrait' src='/assets/photos/pediatric2.jpeg'
-                                                     className='hidden md:block md:relative bottom-10 right-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
+                                                     className='w-[400px] h-[300px] rounded-xl shadow-banner'/>
                                             </div>
                                         </Fade>
                                     </div>
@@ -310,17 +302,21 @@ export default function Services() {
                             </Fade>
                             <div className='w-full flex flex-col lg:flex-col justify-center items-center'>
                                 <div className='w-full flex justify-center items-center mt-auto mb-auto'>
-                                    <Fade direction='right'>
-                                        <div
-                                            className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center mt-4 '>
+                                    <div
+                                        className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center mt-4 '>
+                                        <Fade direction='left'>
                                             <img alt='portrait' src='/assets/photos/reiki.jpeg'
                                                  className='hidden md:block md:relative bottom-10 left-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
+                                        </Fade>
+                                        <Fade direction='up'>
                                             <img alt='portrait' src='/assets/photos/reikihealing.jpeg'
                                                  className='relative md:top-10 z-20 rounded-xl w-64 h-52 md:w-56 md:h-40 lg:w-72 lg:h-56 shadow-banner'/>
+                                        </Fade>
+                                        <Fade direction='right'>
                                             <img alt='portrait' src='/assets/photos/reiki2.jpeg'
                                                  className='hidden md:block md:relative bottom-10 right-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
-                                        </div>
-                                    </Fade>
+                                        </Fade>
+                                    </div>
                                 </div>
                                 <Fade>
                                     <div
