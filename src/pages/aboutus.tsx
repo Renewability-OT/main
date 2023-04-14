@@ -8,11 +8,11 @@ export default function AboutUs() {
                 <div
                     className="w-full h-full flex justify-center bg-cloudBg bg-cover px-6 sm:px-12">
                     <div
-                        className='w-full h-full w-container bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl h-full mt-28 md:mt-32 mb-12'>
-                        <div className='w-full flex flex-col justify-center items-center mt-8'>
-                            <h1 className="mt-[8px] font-bold text-black dark:text-white text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Renewability
+                        className='w-full h-full bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl mt-28 md:mt-32 mb-12'>
+                        <div className='w-full flex flex-col justify-center items-center mt-8 px-4'>
+                            <h1 className="mt-[8px] font-bold text-black dark:text-white text-[22px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Renewability
                                 OT, LLC</h1>
-                            <p className="font-medium text-[14px] sm:text-[18px] text-[#707070] dark:text-[#383C3E]">Diane
+                            <p className="text-center font-medium text-[14px] sm:text-[18px] text-[#707070] dark:text-[#383C3E]">Diane
                                 Gubisch, PH.D,
                                 OTR/L,
                                 ADHD-CCSP</p>
@@ -20,7 +20,7 @@ export default function AboutUs() {
                                  className='rounded-xl mt-8'/>
                         </div>
                         <div
-                            className='w-full flex flex-col justify-center items-center px-10 md:px-16 lg:px-24 mt-8 mb-16'>
+                            className='w-full flex flex-col justify-center items-center px-4 xs:px-10 md:px-16 lg:px-24 mt-8 mb-16'>
                             <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10"><span
                                 className='font-semibold'>ReNewAbility
                                 OT</span> is a

@@ -7,7 +7,7 @@ export const ServicesSection = () => {
     const {setScrollId} = useContext(ScrollContext)
     return (
         <div
-            className="w-full h-full flex flex-col justify-center items-center px-6 pt-6 sm:px-8 lg:px-6 mt-20 bg-gradient-to-b from-lightBlue to-green">
+            className="w-full h-full flex flex-col justify-center items-center px-6 pt-6 sm:px-8 lg:px-6 bg-gradient-to-b from-lightBlue to-green">
             <h1 className="font-bold text-black text-center text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-blog"> Our
                 Services</h1>
             <p className="font-medium text-[14px] sm:text-[18px] text-[#707070] mb-4">
