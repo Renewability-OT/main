@@ -1,17 +1,34 @@
 import Link from "next/link";
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {Switch} from "../switch/Switch";
 import {IoMdClose, IoMdMenu} from "react-icons/io";
 import {ClassNames} from "../../util/ClassNames";
 import {ThemeContext} from "../../context/ThemeContext";
+import {ScrollContext} from "../../context/ScrollContext";
 
 export const Header: React.FC = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
+    const [isScrolling, setIsScrolling] = useState(false)
     const {darkMode} = useContext(ThemeContext)
+    const {setScrollId} = useContext(ScrollContext)
+
+    useEffect(() => {
+        if (typeof window !== "undefined") {
+            const addHeaderStyles = () => {
+                if (window.scrollY > 0) {
+                    setIsScrolling(true)
+                } else {
+                    setIsScrolling(false)
+                }
+            }
+            window.addEventListener('scroll', addHeaderStyles)
+        }
+        return
+    }, []);
     return (
         <>
             <header
-                className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center shadow-lg z-50")}>
+                className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', isScrolling ? 'shadow-lg' : '', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center z-50 transition duration-300 ease-in-out")}>
                 < nav className="flex justify-between items-center w-container">
                     <Link
                         href="/"
@@ -71,7 +88,7 @@ export const Header: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="/services">Services</Link>
+                                <Link href="/services" onClick={() => setScrollId('')}>Services</Link>
                             </li>
                             <li
                                 className="

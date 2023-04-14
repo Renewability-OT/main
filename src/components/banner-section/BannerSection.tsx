@@ -1,9 +1,11 @@
-import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
+import {ContactForm} from "../forms/ContactForm";
 
 export const BannerSection = () => {
+    const [showModal, setShowModal] = useState(false)
+
     return (
-        <div className="w-full h-full flex justify-center px-6 sm:px-12 mt-28 md:mt-32">
+        <div className="w-full h-full flex justify-center px-6 sm:px-12 mt-24 md:mt-28">
             <div
                 className="w-full flex flex-col items-center max-w-[1180px] h-[520px] sm:h-[540px] tablet:h-[640px] lg:h-[680px] rounded-3xl lgXl:rounded-br-[300px] bg-gradient-to-r from-green to-lightBlue shadow-banner">
                 <div
@@ -19,18 +21,17 @@ export const BannerSection = () => {
                         </p>
                         <div
                             className="w-full flex flex-col xs:flex-row justify-center items-center mt-4 lg:mt-3 gap-2">
-                            <Link
-                                href=""
-                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
+                            <button
+                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
                             >
                                 Book Now
-                            </Link>
-                            <Link
-                                href="/services"
-                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button hover:shadow-darkButton hover:opacity-60"
+                            </button>
+                            <button
+                                onClick={() => setShowModal(true)}
+                                className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
                             >
-                                Our Services
-                            </Link>
+                                Contact Us
+                            </button>
                         </div>
                     </div>
                     <div
@@ -42,6 +43,9 @@ export const BannerSection = () => {
                     </div>
                 </div>
             </div>
+            {!showModal ||
+                <ContactForm showModal={showModal}
+                             setShowModal={() => setShowModal(false)}/>}
         </div>
     );
 };

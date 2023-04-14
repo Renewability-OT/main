@@ -30,7 +30,7 @@ export const PopupModal: React.FC<Props> = ({
         <div
             className={ClassNames(
                 visible ? 'block show' : 'hidden',
-                'modal backdrop-brightness-[0.3] fade fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto flex justify-center px-7',
+                'modal backdrop-brightness-[0.3] fade fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto flex justify-center px-7 z-50',
             )}
             tabIndex={-1}
             role="dialog"
