@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, {useContext, useEffect} from "react";
+import React, {useContext} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {ScrollContext} from "../../context/ScrollContext";
 

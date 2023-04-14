@@ -4,7 +4,7 @@ import "../../src/styles/globals.css";
 import {ThemeContextProvider} from "../context/ThemeContext";
 import {BlogContextProvider} from "../context/BlogContext";
 import {NotificationProvider} from "../context/NotificationContext";
-import {ScrollContext, ScrollContextProvider} from "../context/ScrollContext";
+import {ScrollContextProvider} from "../context/ScrollContext";
 
 export default function App({Component, pageProps}: AppProps) {
 
