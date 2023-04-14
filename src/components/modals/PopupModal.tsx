@@ -42,7 +42,7 @@ export const PopupModal: React.FC<Props> = ({
                     <div
                         className={ClassNames(
                             Array.isArray(title) ? 'py-2 px-4 pb-0' : 'py-4 px-8',
-                            'modal-header flex flex-shrink-0 items-center justify-between border-b border-gray-200 rounded-t-md',
+                            'modal-header flex flex-shrink-0 items-center justify-between border-b border-gray-200 dark:border-gray-600 rounded-t-md',
                         )}
                     >
                         {Array.isArray(title) ? (
@@ -66,7 +66,7 @@ export const PopupModal: React.FC<Props> = ({
                                 )
                             })
                         ) : (
-                            <h5 className="text-xl font-medium leading-normal text-gray-800"
+                            <h5 className="text-xl font-medium leading-normal text-gray-800 dark:text-white"
                                 id="modalCenteredScrollableLabel">
                                 {title}
                             </h5>
@@ -81,12 +81,12 @@ export const PopupModal: React.FC<Props> = ({
                     </div>
                     <div className="modal-body relative min-h-[200px] sm:min-h-[200px] py-4 px-8">{children}</div>
                     <div
-                        className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
+                        className="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 dark:border-gray-600 rounded-b-md">
                         {cancelButtonText && (
                             <button
                                 type="button"
                                 onClick={onCancel}
-                                className="inline-block px-6 py-2.5 font-medium text-xs hover:text-gray-800 leading-tight transition duration-150 ease-in-out"
+                                className="inline-block px-6 py-2.5 font-medium text-xs hover:text-gray-800 dark:text-white leading-tight transition duration-150 ease-in-out"
                                 data-bs-dismiss="modal"
                             >
                                 {cancelButtonText}

@@ -58,12 +58,13 @@ export const ContactForm: React.FC<Props> = ({showModal, setShowModal}) => {
                     setIsDisabled(!isValid)
                     return (
                         <Form className='w-full sm:w-[500px]' onSubmit={handleSubmit}>
-                            <p className='font-light text-sm mb-2'>Please Contact Diane Gubisch, PHD, OTR/L For More
+                            <p className='font-light text-sm mb-2 dark:text-white'>Please Contact Diane Gubisch, PHD,
+                                OTR/L For More
                                 Information
                                 On How
                                 Renewability OT, LLC Can
                                 Best Serve You. Looking Forward To Hearing From You!</p>
-                            <p className='font-semibold text-sm mb-4'>Call (301)-538-1330</p>
+                            <p className='font-semibold text-sm mb-4 dark:text-white'>Call (301)-538-1330</p>
                             <div className='mb-2'>
                                 <Field type="name" name="name" id='name' placeholder='Your Name'
                                        className={ClassNames(errors.name === 'Name is a required field' ? 'border-2 border-red-500' : '', 'w-full h-10 bg-[#F1F2F8] rounded-lg p-2 mb-2 text-sm')}/>
