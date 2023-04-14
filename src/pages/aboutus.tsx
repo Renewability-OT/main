@@ -8,7 +8,7 @@ export default function AboutUs() {
                 <div
                     className="w-full h-full flex justify-center bg-cloudBg bg-cover px-6 sm:px-12">
                     <div
-                        className='w-full h-full bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl mt-28 md:mt-32 mb-12'>
+                        className='w-full lg:w-container h-full bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl mt-28 md:mt-32 mb-12'>
                         <div className='w-full flex flex-col justify-center items-center mt-8 px-4'>
                             <h1 className="mt-[8px] font-bold text-black dark:text-white text-[22px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Renewability
                                 OT, LLC</h1>
