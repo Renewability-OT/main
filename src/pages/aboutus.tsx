@@ -1,8 +1,8 @@
 import {Layout} from "../components/layout/Layout";
 import React from "react";
+import {Fade} from "react-awesome-reveal";
 
 export default function AboutUs() {
-    const Fade = require('react-reveal/Fade');
 
     return (
         <>
@@ -12,7 +12,7 @@ export default function AboutUs() {
                     <div
                         className='w-full lg:w-container h-full bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl mt-28 md:mt-32 mb-12'>
                         <div className='w-full flex flex-col justify-center items-center mt-8 px-4'>
-                            <Fade left cascade>
+                            <Fade cascade>
                                 <h1 className="mt-[8px] font-bold text-black dark:text-white text-[22px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Renewability
                                     OT, LLC</h1>
                                 <p className="text-center font-medium text-[14px] sm:text-[18px] text-[#707070] dark:text-[#383C3E]">Diane

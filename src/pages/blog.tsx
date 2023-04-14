@@ -4,11 +4,10 @@ import {BlogContext} from "../context/BlogContext";
 import moment from "moment/moment";
 import {ArticleCard} from "../components/card/ArticleCard";
 import {convert} from "html-to-text";
+import {Zoom, Fade} from "react-awesome-reveal";
 
 export default function Blog() {
     const {posts, author} = useContext(BlogContext)
-    const Flip = require('react-reveal/Flip');
-    const Fade = require('react-reveal/Fade');
 
     return (
         <>
@@ -16,7 +15,7 @@ export default function Blog() {
                 <div className='w-full h-full'>
                     <div
                         className='w-full fixed top-0 h-[400px] flex flex-col justify-center items-center mt-20 bg-leaf2Bg lg:bg-leafBg bg-cover bg-no-repeat bg-[center_top_0rem] lg:bg-[left_top_-12rem] z-[-10]'>
-                        <Fade left cascade>
+                        <Fade direction='down'>
                             <h1 className="font-bold text-black text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xlWhite lg:drop-shadow-blog">Welcome
                                 To Our Blog</h1>
                             <p className="h-fit font-medium text-[14px] sm:text-[18px] text-[#707070] drop-shadow-3xlWhite lg:drop-shadow-blog">Latest
@@ -31,7 +30,7 @@ export default function Blog() {
                                 Posts</p>
                             {posts?.map((p, i) => {
                                 return (
-                                    <Flip top>
+                                    <Zoom duration={500}>
                                         <ArticleCard key={i}
                                                      src={p.thumbnail}
                                                      profileSrc={author?.image ?? ''}
@@ -40,7 +39,7 @@ export default function Blog() {
                                                      title={p.title}
                                                      date={moment(p.pubDate).format('MMMM Do YYYY')}
                                                      desc={`${convert(p.content.substring(0, 340).slice(109))}...`}/>
-                                    </Flip>
+                                    </Zoom>
                                 )
                             })}
                         </div>

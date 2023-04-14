@@ -2,25 +2,26 @@ import Link from "next/link";
 import React, {useContext} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {ScrollContext} from "../../context/ScrollContext";
+import {Fade} from "react-awesome-reveal";
+
 
 export const ServicesSection = () => {
     const {setScrollId} = useContext(ScrollContext)
-    const Flip = require('react-reveal/Flip');
     return (
         <div
             className="w-full h-full flex flex-col justify-center items-center px-6 pt-6 sm:px-8 lg:px-6 bg-gradient-to-b from-lightBlue to-green">
-            <Flip left cascade>
+            <Fade cascade>
                 <h1 className="font-bold text-black text-center text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-blog"> Our
                     Services</h1>
                 <p className="font-medium text-[14px] sm:text-[18px] text-[#707070] mb-4">
                     See What We Have To Offer
                 </p>
-            </Flip>
+            </Fade>
             <div
                 className='flex flex-col lg:flex-row justify-center items-center gap-6 w-full max-w-[1150px] mb-[38px]'>
-                <Flip left>
-                    <div
-                        className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+                <div
+                    className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+                    <Fade duration={2000}>
                         <div className='w-full h-full flex flex-col items-center mt-8'>
                             <div className='w-full h-fit flex justify-center items-center'>
                                 <img alt='servicesection' src='/assets/illustrations/Lifesavers-Ger.png'
@@ -78,11 +79,11 @@ export const ServicesSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </Flip>
-                <Flip left>
-                    <div
-                        className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+                    </Fade>
+                </div>
+                <div
+                    className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+                    <Fade duration={2000}>
                         <div className='w-full h-full flex flex-col items-center mt-8'>
                             <div className='w-full h-fit flex justify-center items-center'>
                                 <img alt='servicesection' src='/assets/illustrations/Lifesavers-Sitting-Ped.png'
@@ -138,11 +139,11 @@ export const ServicesSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </Flip>
-                <Flip left>
-                    <div
-                        className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+                    </Fade>
+                </div>
+                <div
+                    className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+                    <Fade duration={2000}>
                         <div className='w-full h-full flex flex-col items-center mt-8'>
                             <div className='w-full h-fit flex justify-center items-center'>
                                 <img alt='servicesection' src='/assets/illustrations/Lifesavers-Sitting-Reiki.png'
@@ -200,8 +201,8 @@ export const ServicesSection = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </Flip>
+                    </Fade>
+                </div>
             </div>
             <Link
                 href="/services"

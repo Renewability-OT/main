@@ -1,20 +1,21 @@
 import Link from "next/link";
 import React from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
+import {Fade} from "react-awesome-reveal";
+
 
 export const AboutUsSection = () => {
-    const Fade = require('react-reveal/Fade');
     return (
         <div className="w-full flex justify-center mb-10 lgXl:mb-0 lgXl:mt-20 px-6 sm:px-12">
             <div
                 className="flex flex-col lgXl:flex-row justify-center items-center mt-6 max-w-[1180px] h-full rounded-3xl rounded-br-[300px]">
-                <Fade left>
+                <Fade direction='left'>
                     <div className="relative m-auto left-0 right-0 top-[7px]">
                         <img alt="aboutus" src="/assets/illustrations/Lifesavers-Caretaking-2.png"
                              className='max-w-[410px] max-h-[210px] xs:max-w-[510px] xs:max-h-[310px] tablet:max-w-[580px] tablet:max-h-[380px] lg:max-w-[560px] lg:max-h-[420px] lgXl:max-w-[590px] lgXl:max-h-[490px] xl:max-w-[650px] xl:max-h-[450px]'/>
                     </div>
                 </Fade>
-                <Fade right>
+                <Fade direction='right'>
                     <div
                         className="flex flex-col items-center text-center bg-AboutUsBg rounded-3xl lgXl:rounded-bl-[150px] w-full h-full sm:max-w-[700px] sm:max-h-[400px] lgXl:max-h-[500px]">
                         <h1 className="mt-[17.61px] text-lightBlue font-bold text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">

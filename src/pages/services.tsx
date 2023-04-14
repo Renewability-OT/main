@@ -1,10 +1,10 @@
 import React, {useContext, useEffect} from "react";
 import {Layout} from "../components/layout/Layout";
 import {ScrollContext} from "../context/ScrollContext";
+import {Fade} from "react-awesome-reveal";
 
 export default function Services() {
     const {scrollId} = useContext(ScrollContext)
-    const Fade = require('react-reveal/Fade');
 
 
     useEffect(() => {
@@ -24,17 +24,19 @@ export default function Services() {
                 <div id='geriatric' className='w-full h-full bg-green mt-20'>
                     <div
                         className='w-full h-full bg-white dark:bg-dark flex flex-col justify-center items-center py-6'>
-                        <Fade>
-                            <div className='w-full h-full px-5 sm:px-10'>
+                        <div className='w-full h-full px-5 sm:px-10'>
+                            <Fade direction='left'>
                                 <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black dark:text-white text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9 px-2">Geriatric
                                     Care And Adults With Special Needs</p>
                                 <p className="font-medium text-center text-[14px] sm:text-[18px] text-[#707070] mb-4">
                                     *Subtitle Goes Here*
                                 </p>
-                                <div
-                                    className='w-full h-full flex justify-center gap-8 md:gap-0 mt-8'>
-                                    <div className='w-full lg:w-5/6 h-full flex flex-col justify-center items-center'>
-                                        <div className='w-full flex justify-center items-center mt-auto mb-auto'>
+                            </Fade>
+                            <div
+                                className='w-full h-full flex justify-center gap-8 md:gap-0 mt-8'>
+                                <div className='w-full lg:w-5/6 h-full flex flex-col justify-center items-center'>
+                                    <div className='w-full flex justify-center items-center mt-auto mb-auto'>
+                                        <Fade direction='right'>
                                             <div
                                                 className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center'>
                                                 <img alt='portrait' src='/assets/photos/geriatric3.jpeg'
@@ -44,11 +46,13 @@ export default function Services() {
                                                 <img alt='portrait' src='/assets/photos/geriatric2.jpeg'
                                                      className='hidden md:block md:relative bottom-10 right-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
                                             </div>
-                                        </div>
-                                        <div
-                                            className='w-full xs:w-4/5 md:w-fit h-full flex flex-col mt-8 mb-6'>
-                                            <div className='w-full h-full flex items-start'>
-                                                <div className='w-full h-full flex justify-center'>
+                                        </Fade>
+                                    </div>
+                                    <div
+                                        className='w-full xs:w-4/5 md:w-fit h-full flex flex-col mt-8 mb-6'>
+                                        <div className='w-full h-full flex items-start'>
+                                            <div className='w-full h-full flex justify-center'>
+                                                <Fade>
                                                     <div
                                                         className='w-full h-full bg-black/10 dark:bg-white/30 px-8 md:px-12 py-6 rounded-3xl'>
                                                         <div
@@ -141,29 +145,31 @@ export default function Services() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </Fade>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </Fade>
+                        </div>
                     </div>
                 </div>
                 <div id='pediatric' className='w-full h-full bg-white dark:bg-dark'>
                     <div
                         className='w-full h-full bg-gradient-to-r from-lightBlue to-green flex flex-col justify-center items-center py-6'>
-                        <Fade>
-                            <div className='w-full h-full px-5 sm:px-10'>
+                        <div className='w-full h-full px-5 sm:px-10'>
+                            <Fade direction='left'>
                                 <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9">Pediatric
                                     Care</p>
                                 <p className="font-medium text-center text-[14px] sm:text-[18px] text-[#707070] mb-4">
                                     *Subtitle Goes Here*
                                 </p>
-                                <div
-                                    className='w-full h-full flex justify-center gap-8 md:gap-0 mt-4'>
-                                    <div className='w-full lg:w-5/6 h-full flex flex-col justify-center items-center'>
-                                        <div className='w-full flex justify-center items-center mt-auto mb-auto'>
+                            </Fade>
+                            <div
+                                className='w-full h-full flex justify-center gap-8 md:gap-0 mt-4'>
+                                <div className='w-full lg:w-5/6 h-full flex flex-col justify-center items-center'>
+                                    <div className='w-full flex justify-center items-center mt-auto mb-auto'>
+                                        <Fade direction='right'>
                                             <div
                                                 className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center'>
                                                 <img alt='portrait' src='/assets/photos/pediatric3.jpeg'
@@ -173,11 +179,13 @@ export default function Services() {
                                                 <img alt='portrait' src='/assets/photos/pediatric2.jpeg'
                                                      className='hidden md:block md:relative bottom-10 right-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
                                             </div>
-                                        </div>
-                                        <div
-                                            className='w-full xs:w-4/5 md:w-fit h-full flex flex-col mt-8 mb-6'>
-                                            <div className='w-full h-full flex items-start'>
-                                                <div className='w-full h-full flex justify-center'>
+                                        </Fade>
+                                    </div>
+                                    <div
+                                        className='w-full xs:w-4/5 md:w-fit h-full flex flex-col mt-8 mb-6'>
+                                        <div className='w-full h-full flex items-start'>
+                                            <div className='w-full h-full flex justify-center'>
+                                                <Fade>
                                                     <div
                                                         className='w-full h-full bg-white/30 px-8 md:px-12 py-6 rounded-3xl'>
                                                         <div
@@ -281,26 +289,28 @@ export default function Services() {
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </Fade>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </Fade>
+                        </div>
                     </div>
                 </div>
                 <div id='reiki' className='w-full h-full bg-gradient-to-r from-lightBlue to-green'>
                     <div
                         className='w-full h-full bg-light dark:bg-dark flex flex-col justify-center items-center py-6 px-3 md:p-12'>
-                        <Fade>
-                            <div className='w-full xl:w-container h-full'>
+                        <div className='w-full xl:w-container h-full'>
+                            <Fade direction='left'>
                                 <p className="w-full mt-4 mb-2 flex items-center justify-center h-fit text-center text-black dark:text-white text-[22px] md:text-[28px] xl:text-[32px] font-bold leading-7 md:leading-9">Reiki</p>
                                 <p className="font-medium text-center text-[14px] sm:text-[18px] text-[#707070] mb-4">
                                     Stress Reduction and Relaxation
                                 </p>
-                                <div className='w-full flex flex-col lg:flex-col justify-center items-center'>
-                                    <div className='w-full flex justify-center items-center mt-auto mb-auto'>
+                            </Fade>
+                            <div className='w-full flex flex-col lg:flex-col justify-center items-center'>
+                                <div className='w-full flex justify-center items-center mt-auto mb-auto'>
+                                    <Fade direction='right'>
                                         <div
                                             className='w-full h-fit md:h-[240px] lg:h-[300px] flex justify-center items-center mt-4 '>
                                             <img alt='portrait' src='/assets/photos/reiki.jpeg'
@@ -310,7 +320,9 @@ export default function Services() {
                                             <img alt='portrait' src='/assets/photos/reiki2.jpeg'
                                                  className='hidden md:block md:relative bottom-10 right-12 z-10 rounded-xl w-56 h-40 lg:w-72 lg:h-56 shadow-banner'/>
                                         </div>
-                                    </div>
+                                    </Fade>
+                                </div>
+                                <Fade>
                                     <div
                                         className='w-full flex flex-col justify-center items-center px-5 lg:px-10 py-10'>
                                         <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10">Reiki
@@ -358,9 +370,9 @@ export default function Services() {
                                             continued
                                             spiritual awakening.</p>
                                     </div>
-                                </div>
+                                </Fade>
                             </div>
-                        </Fade>
+                        </div>
                     </div>
                 </div>
             </Layout>

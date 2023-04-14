@@ -5,25 +5,24 @@ import {BlogCard} from "../card/BlogCard";
 import moment from 'moment'
 import {BlogContext} from "../../context/BlogContext";
 import {Post} from "../../context/BlogContext";
-
+import {Zoom, Fade} from "react-awesome-reveal";
 import {convert} from 'html-to-text';
 
 export const BlogSection = () => {
-    const Flip = require('react-reveal/Flip');
     const {posts, author} = useContext(BlogContext)
 
     return (
         <div className="w-full h-full flex justify-center">
             <div className="flex flex-col items-center w-full h-full">
-                <Flip left cascade>
+                <Fade cascade>
                     <h1 className="mt-[24px] font-bold dark:text-white text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Blog</h1>
                     <p className="font-medium text-[14px] sm:text-[18px] text-[#707070]">Most Recent Posts</p>
-                </Flip>
+                </Fade>
                 <div className="flex flex-col lg:flex-row gap-6 mt-[16px]">
                     {posts?.map((p: Post, i: number) => {
                         if (i <= 2) {
                             return (
-                                <Flip left>
+                                <Zoom duration={500}>
                                     <BlogCard key={i}
                                               src={p.thumbnail}
                                               profileSrc={author?.image ?? ''}
@@ -32,7 +31,7 @@ export const BlogSection = () => {
                                               title={p.title}
                                               date={moment(p.pubDate).format('MMMM Do YYYY')}
                                               desc={`${convert(p.content.substring(0, 220).slice(109))}...`}/>
-                                </Flip>
+                                </Zoom>
 
                             )
                         }
