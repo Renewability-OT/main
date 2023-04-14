@@ -98,11 +98,6 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                         </div>
                     </div>
                 </div>
-                <img
-                    alt="footerimg"
-                    src="/assets/illustrations/Amigos-Tree.png"
-                    className="w-96 h-96 hidden xl:block absolute md:right-2 lg:right-8 xl:right-20 2xl:right-32 mt-[40px] z-10"
-                />
             </div>
             <div className="text-center text-white text-[12px] sm:text-[16px] font-thin z-50">
                 <span>&#169; Copyright Renewability OT. All Rights Reserved</span>
