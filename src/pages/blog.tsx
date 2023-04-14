@@ -30,7 +30,7 @@ export default function Blog() {
                                 Posts</p>
                             {posts?.map((p, i) => {
                                 return (
-                                    <Zoom duration={500}>
+                                    <Zoom duration={500} key={i}>
                                         <ArticleCard key={i}
                                                      src={p.thumbnail}
                                                      profileSrc={author?.image ?? ''}
