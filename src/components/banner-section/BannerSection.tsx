@@ -26,7 +26,6 @@ export const BannerSection: React.FC = () => {
                                     Book Now
                                 </a>
                                 <a
-                                    // @ts-ignore
                                     href='#services'
                                     className="w-[130px] xl:w-[160px] text-white font-bold border active:border-none py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
                                 >
