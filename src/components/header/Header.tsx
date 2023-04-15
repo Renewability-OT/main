@@ -1,16 +1,42 @@
-import Link from "next/link";
 import React, {useContext, useEffect, useState} from "react";
 import {Switch} from "../switch/Switch";
 import {IoMdClose, IoMdMenu} from "react-icons/io";
 import {ClassNames} from "../../util/ClassNames";
 import {ThemeContext} from "../../context/ThemeContext";
 import {ScrollContext} from "../../context/ScrollContext";
+import {motion} from "framer-motion";
 
 export const Header: React.FC = () => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const [isScrolling, setIsScrolling] = useState(false)
     const {darkMode} = useContext(ThemeContext)
     const {setScrollId} = useContext(ScrollContext)
+
+    const navAnimation = {
+        hidden: {
+            opacity: 0,
+        },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.4,
+                ease: 'easeInOut',
+            }
+        }
+    }
+    const navItemAnimation = {
+        hidden: {
+            opacity: 0,
+            y: '-20px',
+        },
+        show: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                ease: 'easeInOut',
+            }
+        }
+    }
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -30,9 +56,9 @@ export const Header: React.FC = () => {
             <header
                 className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', isScrolling ? 'shadow-lg' : '', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center z-50 transition duration-300 ease-in-out")}>
                 < nav className="flex justify-between items-center w-container">
-                    <Link
-                        href="/"
-                        className="sm:w-64 text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
+                    <motion.a variants={navAnimation} initial='hidden' animate='show'
+                              href="/"
+                              className="sm:w-64 text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
                     >
                         <img
                             alt="navbaricon"
@@ -40,12 +66,13 @@ export const Header: React.FC = () => {
                             src="/assets/icon/logo/icons8-leaf-48.png"
                         />
                         Renewability OT
-                    </Link>
+                    </motion.a>
                     <div
                         className={ClassNames(showMenu ? "right-0" : "right-[-100%]", "max-md:flex max-md:flex-col-reverse max-md:justify-end max-md:fixed max-md:bg-light max-md:dark:bg-dark max-md:top-0 max-md:w-full max-md:h-full max-md:px-8 max-md:pt-3 max-md:pb-14 max-md:uppercase max-md:transition-all max-md:duration-300 max-md:ease-in-out md:w-full md:flex")}>
-                        <ul className="flex flex-col items-center max-md:text-xl gap-8 md:gap-0 md:flex-row">
-                            <li
-                                className="
+                        <motion.ul variants={navAnimation} initial='hidden' animate='show'
+                                   className="flex flex-col items-center max-md:text-xl gap-8 md:gap-0 md:flex-row">
+                            <motion.li variants={navItemAnimation}
+                                       className="
                 mr-4
               text-lightBlue
                 font-light
@@ -65,10 +92,10 @@ export const Header: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="/">Home</Link>
-                            </li>
-                            <li
-                                className="
+                                <a href="/">Home</a>
+                            </motion.li>
+                            <motion.li variants={navItemAnimation}
+                                       className="
                 mr-4
                 text-lightBlue
                 font-light
@@ -88,10 +115,10 @@ export const Header: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="/services" onClick={() => setScrollId('')}>Services</Link>
-                            </li>
-                            <li
-                                className="
+                                <a href="/services" onClick={() => setScrollId('')}>Services</a>
+                            </motion.li>
+                            <motion.li variants={navItemAnimation}
+                                       className="
                 mr-4
                 text-lightBlue
                 font-light
@@ -111,10 +138,10 @@ export const Header: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="/blog">Blog</Link>
-                            </li>
-                            <li
-                                className="
+                                <a href="/blog">Blog</a>
+                            </motion.li>
+                            <motion.li variants={navItemAnimation}
+                                       className="
                 mr-4
                 text-lightBlue
                 font-light
@@ -134,16 +161,19 @@ export const Header: React.FC = () => {
                 hover:before:w-full
                 hover:before:opacity-100"
                             >
-                                <Link href="/aboutus">About Us</Link>
-                            </li>
-                        </ul>
+                                <a href="/aboutus">About Us</a>
+                            </motion.li>
+                        </motion.ul>
                         <div
                             className="md:ml-auto flex flex-col md:flex-row gap-4 md:gap-0 lg:gap-2 items-center justify-center mb-12 md:mb-0">
                             <Switch/>
-                            <button
-                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg transition ease-in-out duration-300 shadow-Button hover:bg-darkBlue">
+                            <motion.button
+                                whileHover={{scale: 1.1}}
+                                whileTap={{scale: 1.0}}
+                                transition={{type: "spring", stiffness: 400, damping: 17}}
+                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg shadow-Button hover:shadow-darkButton">
                                 Book Now
-                            </button>
+                            </motion.button>
                         </div>
                         <div
                             className="text-[2rem] text-lightBlue absolute top-[22px] right-6 sm:right-12 cursor-pointer md:hidden">
