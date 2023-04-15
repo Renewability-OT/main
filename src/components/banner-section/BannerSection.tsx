@@ -1,11 +1,7 @@
 import React, {Dispatch, SetStateAction} from "react";
 import {Fade} from "react-awesome-reveal";
 
-interface Props {
-    setShowModal: Dispatch<SetStateAction<boolean>>
-}
-
-export const BannerSection: React.FC<Props> = ({setShowModal}) => {
+export const BannerSection: React.FC = () => {
     return (
         <div className="w-full h-full flex justify-center px-6 sm:px-12 mt-24 md:mt-28">
             <div
@@ -24,17 +20,17 @@ export const BannerSection: React.FC<Props> = ({setShowModal}) => {
                             </p>
                             <div
                                 className="w-full flex flex-col xs:flex-row justify-center items-center mt-4 lg:mt-3 gap-2">
-                                <button
-                                    className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
+                                <a
+                                    className="w-[130px] xl:w-[160px] text-white font-bold border active:border-none py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60 cursor-pointer"
                                 >
                                     Book Now
-                                </button>
-                                <button
-                                    onClick={() => setShowModal(true)}
-                                    className="w-[130px] xl:w-[160px] text-white font-bold border py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
+                                </a>
+                                <a
+                                    href='#services'
+                                    className="w-[130px] xl:w-[160px] text-white font-bold border active:border-none py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
                                 >
-                                    Contact Us
-                                </button>
+                                    Our Services
+                                </a>
                             </div>
                         </Fade>
                     </div>

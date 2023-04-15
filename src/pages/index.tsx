@@ -7,18 +7,13 @@ import {BlogSection} from "../components/blog-section/BlogSection";
 import {ContactForm} from "../components/forms/ContactForm";
 
 export default function Home() {
-    const [showModal, setShowModal] = useState(false)
-
     return (
         <>
             <Layout title="Home">
-                <BannerSection setShowModal={setShowModal}/>
+                <BannerSection/>
                 <AboutUsSection/>
                 <ServicesSection/>
                 <BlogSection/>
-                {!showModal ||
-                    <ContactForm showModal={showModal}
-                                 setShowModal={() => setShowModal(false)}/>}
             </Layout>
         </>
     );

@@ -9,7 +9,7 @@ export const ServicesSection = () => {
     const {setScrollId} = useContext(ScrollContext)
     return (
         <div
-            className="w-full h-full flex flex-col justify-center items-center px-6 pt-6 sm:px-8 lg:px-6 bg-gradient-to-b from-lightBlue to-green">
+            className="w-full h-full flex flex-col justify-center items-center px-6 pt-6 sm:px-8 lg:px-6 bg-gradient-to-b from-lightBlue to-green mt-28 lgXl:mt-16">
             <Fade cascade>
                 <h1 className="font-bold text-black text-center text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-blog"> Our
                     Services</h1>
