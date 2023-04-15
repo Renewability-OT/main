@@ -15,7 +15,7 @@ export default function Blog() {
                 <div className='w-full h-full'>
                     <div
                         className='w-full fixed top-0 h-[400px] flex flex-col justify-center items-center mt-20 bg-leaf2Bg lg:bg-leafBg bg-cover bg-no-repeat bg-[center_top_0rem] lg:bg-[left_top_-12rem] z-[-10]'>
-                        <Fade direction='down'>
+                        <Fade direction='down' triggerOnce>
                             <h1 className="font-bold text-black text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xlWhite lg:drop-shadow-blog">Welcome
                                 To Our Blog</h1>
                             <p className="h-fit font-medium text-[14px] sm:text-[18px] text-[#707070] drop-shadow-3xlWhite lg:drop-shadow-blog">Latest
@@ -30,7 +30,7 @@ export default function Blog() {
                                 Posts</p>
                             {posts?.map((p, i) => {
                                 return (
-                                    <Zoom duration={500} key={i}>
+                                    <Zoom duration={500} key={i} triggerOnce>
                                         <ArticleCard key={i}
                                                      src={p.thumbnail}
                                                      profileSrc={author?.image ?? ''}

@@ -22,7 +22,7 @@ export const BlogSection = () => {
                     {posts?.map((p: Post, i: number) => {
                         if (i <= 2) {
                             return (
-                                <Zoom duration={500} key={i}>
+                                <Zoom duration={500} key={i} triggerOnce>
                                     <BlogCard key={i}
                                               src={p.thumbnail}
                                               profileSrc={author?.image ?? ''}

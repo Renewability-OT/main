@@ -12,7 +12,7 @@ export default function AboutUs() {
                     <div
                         className='w-full lg:w-container h-full bg-white/30 dark:bg-black/30 backdrop-blur-md rounded-xl mt-28 md:mt-32 mb-12'>
                         <div className='w-full flex flex-col justify-center items-center mt-8 px-4'>
-                            <Fade cascade>
+                            <Fade cascade triggerOnce>
                                 <h1 className="mt-[8px] font-bold text-black dark:text-white text-[22px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">Renewability
                                     OT, LLC</h1>
                                 <p className="text-center font-medium text-[14px] sm:text-[18px] text-[#707070] dark:text-[#383C3E]">Diane
@@ -20,12 +20,12 @@ export default function AboutUs() {
                                     OTR/L,
                                     ADHD-CCSP</p>
                             </Fade>
-                            <Fade cascade>
+                            <Fade cascade triggerOnce>
                                 <img alt='portrait' src='/assets/photos/portrait-diane.jpeg'
                                      className='rounded-xl mt-8'/>
                             </Fade>
                         </div>
-                        <Fade cascade>
+                        <Fade cascade triggerOnce>
                             <div
                                 className='w-full flex flex-col justify-center items-center px-4 xs:px-10 md:px-16 lg:px-24 mt-8 mb-16'>
                                 <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10"><span

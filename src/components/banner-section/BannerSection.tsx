@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from "react";
+import React from "react";
 import {Fade} from "react-awesome-reveal";
 
 export const BannerSection: React.FC = () => {
@@ -9,7 +9,7 @@ export const BannerSection: React.FC = () => {
                 <div
                     className="w-full flex flex-col flex-1 items-center lgXl:items-start text-center mt-16 xs:mt-12 tablet:mt-16 lgXl:mt-20">
                     <div className="w-[90%] lgXl:w-[50%] lgXl:ml-12 flex flex-col items-center z-10">
-                        <Fade direction='left'>
+                        <Fade direction='left' triggerOnce>
                             <p
                                 className="w-72 xs:w-[400px] tablet:w-full uppercase text-white font-extrabold text-[28px] xs:text-[32px] sm:text-[38px] tablet:text-[48px] lgXl:text-[58px] xl:text-[64px] drop-shadow-3xl leading-9 sm:leading-[3rem] tablet:leading-[3.5rem] lgXl:leading-[4.5rem]">
                                 Occupational Therapy <br/>
@@ -26,6 +26,7 @@ export const BannerSection: React.FC = () => {
                                     Book Now
                                 </a>
                                 <a
+                                    // @ts-ignore
                                     href='#services'
                                     className="w-[130px] xl:w-[160px] text-white font-bold border active:border-none py-1 lg:py-2 px-3 rounded-lg transition ease-in-out duration-300 shadow-Button active:shadow-InsetButton hover:opacity-60"
                                 >
@@ -36,7 +37,7 @@ export const BannerSection: React.FC = () => {
                     </div>
                     <div
                         className="w-full z-0 flex flex-1 ml-6 justify-center lgXl:relative lgXl:bottom-[125px] lgXl:w-[600px] lgXl:m-auto lgXl:left-56 xl:left-60 xl:bottom-[152px] items-end ">
-                        <Fade direction='right'>
+                        <Fade direction='right' triggerOnce>
                             <img
                                 className="max-w-[410px] max-h-[210px] xs:max-w-[460px] xs:max-h-[260px] tablet:max-w-[580px] tablet:max-h-[380px] lg:max-w-[620px] lg:max-h-[420px] xl:max-w-[650px] xl:max-h-[450px]"
                                 alt="bannerimg"

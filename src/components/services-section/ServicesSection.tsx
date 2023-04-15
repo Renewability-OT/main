@@ -21,7 +21,7 @@ export const ServicesSection = () => {
                 className='flex flex-col lg:flex-row justify-center items-center gap-6 w-full max-w-[1150px] mb-[38px]'>
                 <div
                     className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
-                    <Fade duration={2000}>
+                    <Fade duration={2000} triggerOnce>
                         <div className='w-full h-full flex flex-col items-center mt-8'>
                             <div className='w-full h-fit flex justify-center items-center'>
                                 <img alt='servicesection' src='/assets/illustrations/Lifesavers-Ger.png'
