@@ -8,50 +8,9 @@ import {geriatricOptions, pediatricOptions, reikiOptions} from "../../constants/
 
 
 export const ServicesSection = () => {
-    const {setScrollId} = useContext(ScrollContext)
     const ref = useRef(null)
     const controls = useAnimation();
     const isInView = useInView(ref, {once: true})
-    const cardAnimation = {
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {
-                duration: 1,
-                delay: .2,
-                ease: [0, 0.71, 0.2, 1.01]
-            }
-        },
-        hidden: {
-            opacity: 0,
-            scale: 0.5,
-        }
-    }
-    const featuresAnimation = {
-        hidden: {
-            opacity: 0,
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.4,
-                ease: 'easeInOut',
-            }
-        }
-    }
-    const featuresItemAnimation = {
-        hidden: {
-            opacity: 0,
-            y: '-20px',
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                ease: 'easeInOut',
-            }
-        }
-    }
     useEffect(() => {
         if (isInView) {
             controls.start("visible");
