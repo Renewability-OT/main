@@ -11,7 +11,7 @@ import {motion} from "framer-motion";
 export const BlogSection = () => {
     const {posts, author} = useContext(BlogContext)
     return (
-        <div className="w-full h-full flex justify-center">
+        <div className="w-full h-full px-6 flex justify-center">
             <div className="flex flex-col items-center w-full h-full">
                 <AnimatedText text='Blog'
                               classNames="mt-[24px] font-bold dark:text-white text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl"/>

@@ -40,7 +40,7 @@ export const BlogCard: React.FC<Props> = ({title, src, date, desc, author, link,
     return (
         <motion.div ref={ref} animate={controls}
                     variants={cardAnimation} initial='hidden'
-                    className="w-[280px] h-[470px] xs:w-[310px] xs:h-[470px] sm:w-[370px] sm:h-[445px] lg:w-[310px] lg:h-[470px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
+                    className="w-[275px] h-[470px] xs:w-[310px] xs:h-[470px] sm:w-[370px] sm:h-[445px] lg:w-[310px] lg:h-[470px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
             <img alt='blogcard' src={src} className="w-full h-1/2 rounded-t-2xl object-cover object-centerTopBlog"/>
             <div className='w-full text-center mt-2'>
                 <p className="font-light text-xs text-[#A7A4A4]">
@@ -51,7 +51,7 @@ export const BlogCard: React.FC<Props> = ({title, src, date, desc, author, link,
                 <p className="ml-8 mr-8 text-[16px] leading-5 text-center font-light">{desc}</p>
             </div>
             <div className="w-full flex justify-between px-6 items-center mt-5">
-                <div className='flex items-center gap-2'>
+                <div className='flex items-center gap-1'>
                     <img alt='avatar' src={profileSrc}
                          className='w-7 h-7 rounded-full border border-black dark:border-white'/>
                     <p className="text-xs font-normal text-black">

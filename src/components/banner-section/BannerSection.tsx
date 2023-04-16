@@ -17,11 +17,13 @@ const bannerAnimation = {
 const textAnimation = {
     visible: {
         opacity: 1,
+        scale: 1,
         x: 0,
         transition: {duration: .7}
     },
     hidden: {
         opacity: 0,
+        scale: 0.8,
         x: '-200px',
     }
 }
@@ -29,12 +31,14 @@ const textAnimation = {
 const imageAnimation = {
     visible: {
         opacity: 1,
+        scale: 1,
         x: 0,
         transition: {duration: .7}
     },
     hidden: {
         opacity: 0,
-        x: '200px',
+        scale: 0.3,
+        x: '100px',
     }
 }
 
@@ -52,7 +56,7 @@ export const BannerSection: React.FC = () => {
             <motion.div variants={bannerAnimation} initial='hidden' animate='show'
                         className="w-full flex flex-col items-center max-w-[1180px] h-[520px] sm:h-[540px] tablet:h-[640px] lg:h-[680px] rounded-3xl lgXl:rounded-br-[300px] bg-gradient-to-r from-green to-lightBlue shadow-banner">
                 <div
-                    className="w-full flex flex-col flex-1 items-center lgXl:items-start text-center mt-16 xs:mt-12 tablet:mt-16 lgXl:mt-20">
+                    className="w-full h-full flex flex-col flex-1 items-center lgXl:items-start text-center mt-16 xs:mt-12 tablet:mt-16 lgXl:mt-20">
                     <motion.div ref={ref} animate={controls} variants={textAnimation} initial='hidden'
                                 className="w-[90%] lgXl:w-[50%] lgXl:ml-12 flex flex-col items-center z-10">
                         <p
@@ -85,9 +89,9 @@ export const BannerSection: React.FC = () => {
                         </div>
                     </motion.div>
                     <div
-                        className="w-full z-0 flex flex-1 ml-6 justify-center lgXl:relative lgXl:bottom-[125px] lgXl:w-[600px] lgXl:m-auto lgXl:left-56 xl:left-60 xl:bottom-[152px] items-end ">
+                        className="w-fit z-0 flex flex-1 ml-3 justify-center lgXl:relative lgXl:bottom-[120px] lgXl:w-[600px] lgXl:m-auto lgXl:left-60 xl:left-60 xl:bottom-[122px] items-end ">
                         <motion.img ref={ref} animate={controls} variants={imageAnimation} initial='hidden'
-                                    className="max-w-[410px] max-h-[210px] xs:max-w-[460px] xs:max-h-[260px] tablet:max-w-[580px] tablet:max-h-[380px] lg:max-w-[620px] lg:max-h-[420px] xl:max-w-[650px] xl:max-h-[450px]"
+                                    className="w-[250px] h-[210px] xs:w-[330px] xs:h-[260px] tablet:w-[480px] tablet:h-[350px] lg:w-[620px] lg:h-[420px] xl:w-[650px] xl:h-[420px]"
                                     alt="bannerimg"
                                     src="/assets/illustrations/Lifesavers-Caretaking.png"/>
                     </div>
