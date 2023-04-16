@@ -1,6 +1,5 @@
-import React, {useContext, useEffect, useRef} from "react";
+import React, {useEffect, useRef} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
-import {ScrollContext} from "../../context/ScrollContext";
 import {motion, useAnimation, useInView} from "framer-motion";
 import AnimatedText from "../animation/AnimatedText";
 import {ServiceCard} from "../card/ServiceCard";
