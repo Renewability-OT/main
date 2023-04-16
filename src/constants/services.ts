@@ -1,15 +1,21 @@
 export const geriatricOptions = [
-    'In Home Saftey Evaluation',
-    'Improve Coordination',
-    'Improve Cognitive Functioning',
+    {label: 'In Home Safety Evaluation',},
+    {label: 'Activities of Daily Living'},
+    {label: 'Strengthening'},
+    {label: 'Improve Coordination'},
+    {label: 'Improve Cognitive Function'},
 ]
 export const pediatricOptions = [
-    'ADHD',
-    'Autism Spectrum Disorder',
-    'Emotional/Behavioral',
+    {label: 'ADHD'},
+    {label: 'Autism Spectrum Disorder'},
+    {label: 'Emotional/Behavioral'},
+    {label: 'Social Anxieties'},
+    {label: 'Mindfulness'},
 ]
 export const reikiOptions = [
-    'In Home Reiki Session',
-    'Stress Reduction',
-    'Relaxation',
+    {label: 'In Home Reiki Session'},
+    {label: 'Stress Reduction'},
+    {label: 'Relaxation'},
+    {label: 'Self Healing'},
+    {label: 'Meditation'},
 ]

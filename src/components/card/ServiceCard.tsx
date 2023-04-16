@@ -1,5 +1,6 @@
-import Link from "next/link";
-import React from "react";
+import React, {useContext, useEffect, useRef} from "react";
+import {motion, useAnimation, useInView} from "framer-motion";
+import {ScrollContext} from "../../context/ScrollContext";
 
 interface Options {
     label: string
@@ -7,35 +8,103 @@ interface Options {
 
 interface Props {
     src: string
-    iconSrc: string
     title: string
     options: Options[]
+    scrollId: string
 }
 
-export const ServiceCard: React.FC<Props> = ({title, src, iconSrc, options}) => {
+export const ServiceCard: React.FC<Props> = ({title, src, options, scrollId}) => {
+    const {setScrollId} = useContext(ScrollContext)
+    const ref = useRef(null)
+    const controls = useAnimation();
+    const isInView = useInView(ref, {once: true})
+    const cardAnimation = {
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 1,
+                delay: .2,
+                ease: [0, 0.71, 0.2, 1.01]
+            }
+        },
+        hidden: {
+            opacity: 0,
+            scale: 0.5,
+        }
+    }
+    const featuresAnimation = {
+        hidden: {
+            opacity: 0,
+        },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.4,
+                ease: 'easeInOut',
+            }
+        }
+    }
+    const featuresItemAnimation = {
+        hidden: {
+            opacity: 0,
+            y: '-20px',
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                ease: 'easeInOut',
+            }
+        }
+    }
+    useEffect(() => {
+        if (isInView) {
+            controls.start("visible");
+        }
+    }, [controls, isInView]);
     return (
-        <div
-            className="bg-[#FEFEFE] w-[280px] h-[430px] xs:w-[310px] xs:h-[450px] sm:w-[370px] sm:h-[495px] lg:w-[310px] lg:h-[450px] bg-[#FEFEFE] rounded-2xl drop-shadow-4xl">
-            <img alt='servicecard' src={src}
-                 className="w-full h-[212px] rounded-t-2xl object-cover object-centerTopServices"/>
-            <p className="text-black flex items-center justify-center mt-2 xs:mt-3 sm:mt-5 lg:mt-3 w-full h-12 px-4 sm:px-6 lg:px-4 text-center font-bold text-[16px] xs:text-[18px] sm:text-[20px] lg:text-[18px] leading-6">{title}</p>
-            <div className='w-full flex flex-col items-center'>
-                <div className='mt-2 xs:mt-3'>
-                    {options.map((n, i) => {
-                        return (
-                            <div key={i} className="flex items-center w-fit">
-                                <img className='w-6 sm:w-8 lg:w-6 mb-3' src={iconSrc} alt='servicecardimg'/>
-                                <p className="text-black ml-2 mb-3 xs:mb-3 text-xs xs:text-sm sm:text-md lg:text-sm w-fit">{n.label}</p>
+        <motion.div
+            ref={ref} animate={controls}
+            variants={cardAnimation} initial='hidden'
+            className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+            <div className='w-full h-full flex flex-col items-center mt-8'>
+                <div className='w-full h-fit flex justify-center items-center'>
+                    <img alt='servicesection' src={src}
+                         className="mr-6 w-[220px] h-[200px] sm:h-[200px] max-h-[200px] object-cover object-centerTopServices"/>
+                </div>
+                <div className='w-full h-fit flex justify-center items-center mt-6'>
+                    <div className='w-full'>
+                        <p className="w-56 xs:w-64 xl:w-full m-auto flex items-center justify-center h-[50px] lg:h-[60px] text-center text-black text-[18px] sm:text-[20px] xl:text-[24px] font-semibold leading-6 xl:leading-8">{title}</p>
+                        <motion.div variants={featuresAnimation} ref={ref} animate={controls} initial='hidden'
+                                    className='w-full h-full flex justify-center'>
+                            <div className='mt-4'>
+                                {options.map((o, i) => {
+                                    return (
+                                        <motion.div key={i} variants={featuresItemAnimation}
+                                                    className="flex items-center w-fit">
+                                            <img className='w-7 mb-3' src='/assets/icon/card/card-check.png'
+                                                 alt='servicecardimg'/>
+                                            <p className="text-black ml-2 mb-3 xs:mb-3 text-sm xs:text-base w-fit">{o.label}</p>
+                                        </motion.div>
+                                    )
+                                })}
                             </div>
-                        )
-                    })}
+                        </motion.div>
+                        <div className="w-full flex justify-center items-center mt-4 xs:mt-3">
+                            <motion.a
+                                href="/services"
+                                whileHover={{scale: 1.1}}
+                                whileTap={{scale: 1.0}}
+                                transition={{type: "spring", stiffness: 400, damping: 17}}
+                                onClick={() => setScrollId(scrollId)}
+                                className="cursor-pointer border border-pink text-pink font-light text-[16px] px-6 py-1 rounded-full hover:bg-pink hover:text-[#FEFEFE]">Learn
+                                More
+                            </motion.a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div className="w-full flex justify-center mt-1 xs:mt-2 sm:mt-3 lg:mt-2">
-                <Link href=''
-                      className="border border-pink text-pink font-light text-[11px] xs:text-[13px] sm:text-[16px] lg:text-[13px] px-6 py-1 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Learn
-                    More</Link>
-            </div>
-        </div>
+        </motion.div>
     )
 }
