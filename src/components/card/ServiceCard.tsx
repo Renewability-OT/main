@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useRef} from "react";
 import {motion, useAnimation, useInView} from "framer-motion";
 import {ScrollContext} from "../../context/ScrollContext";
+import Link from "next/link";
 
 interface Options {
     label: string
@@ -91,17 +92,19 @@ export const ServiceCard: React.FC<Props> = ({title, src, options, scrollId}) =>
                                 })}
                             </div>
                         </motion.div>
-                        <div className="w-full flex justify-center items-center mt-4 xs:mt-3">
-                            <motion.a
+                        <motion.div className="w-full flex justify-center items-center mt-4 xs:mt-3"
+                                    whileHover={{scale: 1.1}}
+                                    whileTap={{scale: 1.0}}
+                                    transition={{type: "spring", stiffness: 400, damping: 17}}>
+                            <Link
                                 href="/services"
-                                whileHover={{scale: 1.1}}
-                                whileTap={{scale: 1.0}}
-                                transition={{type: "spring", stiffness: 400, damping: 17}}
-                                onClick={() => setScrollId(scrollId)}
+                                onClick={() => {
+                                    setScrollId(scrollId)
+                                }}
                                 className="cursor-pointer border border-pink text-pink font-light text-[16px] px-6 py-1 rounded-full hover:bg-pink hover:text-[#FEFEFE]">Learn
                                 More
-                            </motion.a>
-                        </div>
+                            </Link>
+                        </motion.div>
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@ export const ServicesSection = () => {
                              scrollId='pediatric'/>
                 <ServiceCard src='/assets/illustrations/Lifesavers-Sitting-Reiki.png' title='Reiki'
                              options={reikiOptions}
-                             scrollId='geriatric'/>
+                             scrollId='reiki'/>
             </div>
             <motion.a
                 href="/services"
