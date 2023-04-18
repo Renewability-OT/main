@@ -89,10 +89,12 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                             </h3>
                             <div className="flex">
                                 <Link href="https://www.facebook.com/dgubisch/" className="mr-2">
-                                    <BsFacebook size={20} color="white"/>
+                                    <BsFacebook size={20}
+                                                className='text-white hover:text-pink transition duration-300 ease-in-out'/>
                                 </Link>
                                 <Link href="https://www.instagram.com/dgubisch/?hl=en" className="mr-2">
-                                    <BsInstagram size={20} color="white"/>
+                                    <BsInstagram size={20}
+                                                 className='text-white hover:text-pink transition duration-300 ease-in-out'/>
                                 </Link>
                             </div>
                         </div>

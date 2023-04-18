@@ -68,11 +68,11 @@ export const ServiceCard: React.FC<Props> = ({title, src, options, scrollId}) =>
         <motion.div
             ref={ref} animate={controls}
             variants={cardAnimation} initial='hidden'
-            className="w-full max-w-[400px] h-[600px] px-6 bg-white/30 rounded-2xl">
+            className="w-full max-w-[400px] h-[565px] xs:h-[600px] px-6 bg-white/30 rounded-2xl">
             <div className='w-full h-full flex flex-col items-center mt-8'>
                 <div className='w-full h-fit flex justify-center items-center'>
                     <img alt='servicesection' src={src}
-                         className="mr-6 w-[220px] h-[200px] sm:h-[200px] max-h-[200px] object-cover object-centerTopServices"/>
+                         className="mr-2 xs:mr-10 w-[190px] h-[160px] xs:w-[220px] xs:h-[200px] sm:h-[200px] max-h-[200px] object-cover object-centerTopServices"/>
                 </div>
                 <div className='w-full h-fit flex justify-center items-center mt-6'>
                     <div className='w-full'>
