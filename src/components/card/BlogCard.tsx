@@ -57,10 +57,12 @@ export const BlogCard: React.FC<Props> = ({title, src, date, desc, author, link,
                     <p className="text-xs font-normal text-black">
                         {author}</p>
                 </div>
-                <a href={link}
-                   target="_blank" rel="noopener noreferrer"
-                   className="flex items-center border border-pink text-pink font-light text-[11px] sm:text-[13px] px-4 py-1 rounded-full transition ease-in-out duration-300 hover:bg-pink hover:text-[#FEFEFE]">Read
-                    More <BiRightArrowAlt className="h-4 w-4"/></a>
+                <motion.a href={link} whileHover={{scale: 1.1}}
+                          whileTap={{scale: 1.0}}
+                          transition={{type: "spring", stiffness: 400, damping: 17}}
+                          target="_blank" rel="noopener noreferrer"
+                          className="flex items-center border border-pink text-pink font-light text-[11px] sm:text-[13px] px-4 py-1 rounded-full hover:bg-pink hover:text-[#FEFEFE]">Read
+                    More <BiRightArrowAlt className="h-4 w-4"/></motion.a>
             </div>
         </motion.div>
     )

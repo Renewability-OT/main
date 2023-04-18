@@ -92,7 +92,7 @@ export const ServiceCard: React.FC<Props> = ({title, src, options, scrollId}) =>
                                 })}
                             </div>
                         </motion.div>
-                        <motion.div className="w-full flex justify-center items-center mt-4 xs:mt-3"
+                        <motion.div className="w-fit m-auto flex justify-center items-center mt-4 xs:mt-3"
                                     whileHover={{scale: 1.1}}
                                     whileTap={{scale: 1.0}}
                                     transition={{type: "spring", stiffness: 400, damping: 17}}>

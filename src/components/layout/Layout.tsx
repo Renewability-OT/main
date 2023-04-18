@@ -28,7 +28,7 @@ export const Layout: React.FC<LayoutProps> = ({children, title, removeFooter}) =
                 <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
                 <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
             </Head>
-            <Header/>
+            <Header title={title}/>
             <Notification/>
             <div>{children}</div>
             <Footer removeFooter={removeFooter}/>

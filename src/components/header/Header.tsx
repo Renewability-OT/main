@@ -1,22 +1,28 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {Switch} from "../switch/Switch";
 import {IoMdClose, IoMdMenu} from "react-icons/io";
 import {ClassNames} from "../../util/ClassNames";
 import {ThemeContext} from "../../context/ThemeContext";
 import {ScrollContext} from "../../context/ScrollContext";
-import {motion} from "framer-motion";
+import {motion, useAnimation} from "framer-motion";
 
-export const Header: React.FC = () => {
+interface Props {
+    title?: string
+}
+
+export const Header: React.FC<Props> = ({title}) => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
     const [isScrolling, setIsScrolling] = useState(false)
     const {darkMode} = useContext(ThemeContext)
     const {setScrollId} = useContext(ScrollContext)
+    const ref = useRef(null)
+    const controls = useAnimation();
 
     const navAnimation = {
         hidden: {
             opacity: 0,
         },
-        show: {
+        visible: {
             opacity: 1,
             transition: {
                 staggerChildren: 0.4,
@@ -29,7 +35,7 @@ export const Header: React.FC = () => {
             opacity: 0,
             y: '-20px',
         },
-        show: {
+        visible: {
             opacity: 1,
             y: 0,
             transition: {
@@ -37,6 +43,12 @@ export const Header: React.FC = () => {
             }
         }
     }
+
+    useEffect(() => {
+        if (title === 'Home') {
+            controls.start("visible");
+        }
+    }, [controls]);
 
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -56,7 +68,8 @@ export const Header: React.FC = () => {
             <header
                 className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', isScrolling ? 'shadow-lg' : '', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center z-50 transition duration-300 ease-in-out")}>
                 < nav className="flex justify-between items-center w-container">
-                    <motion.a variants={navAnimation} initial='hidden' animate='show'
+                    <motion.a ref={ref} variants={navAnimation} initial={title === 'Home' ? 'hidden' : 'show'}
+                              animate={controls}
                               href="/"
                               className="sm:w-64 text-lg lg:text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green to-lightBlue"
                     >
@@ -69,7 +82,8 @@ export const Header: React.FC = () => {
                     </motion.a>
                     <div
                         className={ClassNames(showMenu ? "right-0" : "right-[-100%]", "max-md:flex max-md:flex-col-reverse max-md:justify-end max-md:fixed max-md:bg-light max-md:dark:bg-dark max-md:top-0 max-md:w-full max-md:h-full max-md:px-8 max-md:pt-3 max-md:pb-14 max-md:uppercase max-md:transition-all max-md:duration-300 max-md:ease-in-out md:w-full md:flex")}>
-                        <motion.ul variants={navAnimation} initial='hidden' animate='show'
+                        <motion.ul ref={ref} variants={navAnimation} initial={title === 'Home' ? 'hidden' : 'show'}
+                                   animate={controls}
                                    className="flex flex-col items-center max-md:text-xl gap-8 md:gap-0 md:flex-row">
                             <motion.li variants={navItemAnimation}
                                        className="
@@ -170,7 +184,7 @@ export const Header: React.FC = () => {
                             <motion.button
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 1.0}}
-                                transition={{type: "spring", stiffness: 400, damping: 17}}
+                                transition={{type: "spring", stiffness: 400, damping: 17, ease: 'easeInOut',}}
                                 className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg shadow-Button hover:shadow-darkButton">
                                 Book Now
                             </motion.button>
