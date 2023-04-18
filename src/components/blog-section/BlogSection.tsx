@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef} from "react";
+import React, {useContext} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {BlogCard} from "../card/BlogCard";
 import moment from 'moment'
@@ -6,7 +6,7 @@ import {BlogContext} from "../../context/BlogContext";
 import {Post} from "../../context/BlogContext";
 import {convert} from 'html-to-text';
 import AnimatedText from "../animation/AnimatedText";
-import {motion, useAnimation, useInView} from "framer-motion";
+import {motion} from "framer-motion";
 
 export const BlogSection = () => {
     const {posts, author} = useContext(BlogContext)
