@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
+import {motion, useAnimation, useInView} from "framer-motion";
 
 
 interface Props {
@@ -13,9 +14,34 @@ interface Props {
 }
 
 export const ArticleCard: React.FC<Props> = ({title, src, date, desc, link, profileSrc}) => {
+    const ref = useRef(null)
+    const controls = useAnimation();
+    const isInView = useInView(ref, {once: true})
+    const cardAnimation = {
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                duration: 1,
+                delay: 0.2,
+                ease: [0, 0.71, 0.2, 1.01]
+            }
+        },
+        hidden: {
+            opacity: 0,
+            scale: 0.5,
+        }
+    }
+    useEffect(() => {
+        if (isInView) {
+            controls.start("visible");
+        }
+    }, [controls, isInView]);
+
     return (
-        <div
-            className='w-full h-full sm:h-[280px] lg:h-[220px] rounded-3xl bg-light dark:bg-dark shadow-article mb-4'>
+        <motion.div ref={ref} animate={controls}
+                    variants={cardAnimation} initial='hidden'
+                    className='w-full h-full sm:h-[280px] lg:h-[220px] rounded-3xl bg-light dark:bg-dark shadow-article mb-4'>
             <div className='w-full h-full flex flex-col items-center sm:flex-row p-6 xs:p-8'>
                 <img alt='article-img' className='w-full xs:w-2/3 sm:w-1/3 h-full rounded-3xl'
                      src={src}/>
@@ -43,6 +69,6 @@ export const ArticleCard: React.FC<Props> = ({title, src, date, desc, link, prof
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

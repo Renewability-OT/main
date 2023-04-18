@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useContext, useEffect, useRef} from "react";
 import {BiRightArrowAlt} from "react-icons/bi";
 import {BlogCard} from "../card/BlogCard";
 import moment from 'moment'
@@ -6,10 +6,11 @@ import {BlogContext} from "../../context/BlogContext";
 import {Post} from "../../context/BlogContext";
 import {convert} from 'html-to-text';
 import AnimatedText from "../animation/AnimatedText";
-import {motion} from "framer-motion";
+import {motion, useAnimation, useInView} from "framer-motion";
 
 export const BlogSection = () => {
     const {posts, author} = useContext(BlogContext)
+
     return (
         <div className="w-full h-full px-6 flex justify-center">
             <div className="flex flex-col items-center w-full h-full">
