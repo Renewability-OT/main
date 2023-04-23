@@ -80,7 +80,8 @@ const Geriatric = () => {
                                 <motion.div ref={ref} animate={controls}
                                             variants={imageAnimation} initial='hidden'
                                             className='w-full h-fit flex justify-center items-center'>
-                                    <Image alt='portrait' src='/assets/photos/geriatric2.jpeg' width={100} height={100}
+                                    <Image alt='portrait' src='/assets/photos/geriatric2.jpeg' quality={100} width={100}
+                                           height={100}
                                            className='w-[300px] h-[220px] xs:w-[350px] xs:h-[250px] md:w-[400px] md:h-[270px] rounded-xl shadow-banner'/>
                                 </motion.div>
                             </div>
