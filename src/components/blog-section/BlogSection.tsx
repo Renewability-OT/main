@@ -15,9 +15,9 @@ export const BlogSection = () => {
         <div className="w-full h-full px-6 flex justify-center">
             <div className="flex flex-col items-center w-full h-full">
                 <AnimatedText text='Blog'
-                              classNames="mt-[24px] font-bold dark:text-white text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl"/>
+                              classNames="mt-[24px] font-bold dark:text-white text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-lg"/>
                 <AnimatedText text='Most Recent Posts'
-                              classNames="font-medium text-[14px] sm:text-[18px] text-[#707070]"/>
+                              classNames="font-medium text-[14px] sm:text-[18px] text-[#707070] drop-shadow-lg"/>
                 <div className="flex flex-col lg:flex-row gap-6 mt-[16px]">
                     {posts?.map((p: Post, i: number) => {
                         if (i <= 2) {

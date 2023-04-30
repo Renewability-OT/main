@@ -72,7 +72,7 @@ export const ServiceCard: React.FC<Props> = ({title, src, options, scrollId}) =>
             <div className='w-full h-full flex flex-col items-center mt-8'>
                 <div className='w-full h-fit flex justify-center items-center'>
                     <img alt='servicesection' src={src}
-                         className="mr-2 xs:mr-10 w-[190px] h-[160px] xs:w-[220px] xs:h-[200px] sm:h-[200px] max-h-[200px] object-cover object-centerTopServices"/>
+                         className="mr-2 xs:mr-6 w-[190px] h-[160px] xs:w-[220px] xs:h-[200px] sm:h-[200px] max-h-[200px] object-cover object-centerTopServices"/>
                 </div>
                 <div className='w-full h-fit flex justify-center items-center mt-6'>
                     <div className='w-full'>

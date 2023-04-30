@@ -7,17 +7,6 @@ export default function AboutUs() {
     const ref = useRef(null)
     const controls = useAnimation();
     const isInView = useInView(ref, {once: true})
-    const textAnimation = {
-        visible: {
-            opacity: 1,
-            scale: 1,
-            transition: {duration: .7}
-        },
-        hidden: {
-            opacity: 0,
-            scale: 0.5,
-        }
-    }
     const imageAnimation = {
         visible: {
             opacity: 1,
@@ -46,18 +35,15 @@ export default function AboutUs() {
                                 OT, LLC'
                                           classNames="mt-[8px] font-bold text-black dark:text-white text-[22px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl"/>
                             <AnimatedText text='Diane
-                                Gubisch, PH.D,
-                                OTR/L,
-                                ADHD-CCSP'
+                                Gubisch, PH.D, OTR/L, ADHD-CCSP'
                                           classNames="text-center font-medium text-[14px] sm:text-[18px] text-[#707070] dark:text-[#383C3E]"/>
                             <motion.img ref={ref} animate={controls}
                                         variants={imageAnimation} initial='hidden' alt='portrait'
                                         src='/assets/photos/portrait-diane.jpeg'
                                         className='rounded-xl mt-8'/>
                         </div>
-                        <motion.div ref={ref} animate={controls}
-                                    variants={textAnimation} initial='hidden'
-                                    className='w-full flex flex-col justify-center items-center px-4 xs:px-10 md:px-16 lg:px-24 mt-8 mb-16'>
+                        <div
+                            className='w-full flex flex-col justify-center items-center px-4 xs:px-10 md:px-16 lg:px-24 mt-8 mb-16'>
                             <p className="font-light text-[16px] sm:text-[18px] text-black dark:text-white indent-10"><span
                                 className='font-semibold'>ReNewAbility
                                 OT</span> is a
@@ -128,7 +114,7 @@ export default function AboutUs() {
                                 mankind. A comprehensive wellness program is developed following an evaluation of
                                 physical, psychological, nutritional needs, cognitive functioning, social and
                                 environmental situation is performed in the clients home. </p>
-                        </motion.div>
+                        </div>
                     </div>
                 </div>
             </Layout>

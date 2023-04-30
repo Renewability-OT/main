@@ -186,7 +186,7 @@ export const Header: React.FC<Props> = ({title}) => {
                                 whileTap={{scale: 1.0}}
                                 transition={{type: "spring", stiffness: 400, damping: 17, ease: 'easeInOut',}}
                                 className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg shadow-Button hover:shadow-darkButton">
-                                Book Now
+                                Book A Call
                             </motion.button>
                         </div>
                         <div

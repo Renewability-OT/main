@@ -68,21 +68,21 @@ export const BannerSection: React.FC = () => {
                             Believing In The Power Of You!
                         </p>
                         <div
-                            className="w-full flex flex-col xs:flex-row justify-center items-center mt-4 lg:mt-3 gap-2">
+                            className="w-full flex flex-col xs:flex-row justify-center items-center mt-4 lg:mt-3 gap-2 xs:gap-3">
                             <motion.button
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 1.0}}
                                 transition={{type: "spring", stiffness: 400, damping: 17}}
-                                className="w-[130px] xl:w-[160px] text-white bg-[#35C99B] font-medium border active:border-none py-1 lg:py-2 px-3 rounded-lg shadow-Button cursor-pointer"
+                                className="w-[130px] xl:w-[160px] text-white bg-[#35C99B] font-medium border active:border-none py-1 xs:py-2 px-3 rounded-lg shadow-Button cursor-pointer"
                             >
-                                Book Now
+                                Book A Call
                             </motion.button>
                             <motion.a
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 1.0}}
                                 transition={{type: "spring", stiffness: 400, damping: 17}}
                                 href='#services'
-                                className="w-[130px] xl:w-[160px] shadow-Button bg-[#35C99B] text-white font-medium py-1 lg:py-2 px-3 rounded-lg"
+                                className="w-[130px] xl:w-[160px] shadow-Button bg-[#35C99B] text-white font-medium py-1 xs:py-2 px-3 rounded-lg"
                             >
                                 Our Services
                             </motion.a>

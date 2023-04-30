@@ -53,7 +53,7 @@ export const AboutUsSection = () => {
                     </motion.div>
                     <motion.div ref={ref} animate={controls} variants={textAnimation} initial='hidden'
                                 className="flex flex-col items-center text-center bg-AboutUsBg rounded-3xl lgXl:rounded-bl-[150px] w-full h-full sm:max-w-[700px] sm:max-h-[400px] lgXl:max-h-[500px]">
-                        <h1 className="mt-[17.61px] text-lightBlue font-bold text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-3xl">
+                        <h1 className="mt-[17.61px] text-lightBlue font-bold text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-lg">
                             About Us
                         </h1>
                         <p className="font-medium text-[14px] sm:text-[18px] text-[#707070] dark:text-[#FEFEFE]">

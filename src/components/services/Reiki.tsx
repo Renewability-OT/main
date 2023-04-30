@@ -43,7 +43,7 @@ const Reiki = () => {
                 <div className='w-full xl:w-container h-full'>
                     <div className='w-full flex flex-col items-center'>
                         <AnimatedText text='Reiki'
-                                      classNames="w-[280px] xs:w-[380px] text-dark dark:text-white lg:w-full mt-4 mb-2 flex flex-wrap items-center justify-center h-fit text-center text-black text-[22px] xs:text-[28px] lg:text-[32px] font-bold leading-7 md:leading-9"/>
+                                      classNames="w-[280px] xs:w-[380px] text-dark dark:text-white lg:w-full mt-4 mb-2 flex flex-wrap items-center justify-center h-fit text-center text-[22px] xs:text-[28px] lg:text-[32px] font-bold leading-7 md:leading-9"/>
                         <AnimatedText text='Stress Reduction And Relaxation'
                                       classNames="font-medium text-center text-[14px] xs:text-[18px] text-[#707070]"/>
                     </div>

@@ -19,9 +19,9 @@ export const ServicesSection = () => {
         <div
             className="w-full h-full flex flex-col justify-center items-center px-6 pt-6 sm:px-8 lg:px-6 bg-gradient-to-b from-lightBlue to-green mt-28 lgXl:mt-14">
             <AnimatedText text='Our Services'
-                          classNames="font-bold text-black text-center text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-blog"/>
+                          classNames="font-bold text-black text-center text-[28px] xs:text-[32px] sm:text-[38px] drop-shadow-lg"/>
             <AnimatedText text='See What We Have To Offer'
-                          classNames="font-medium text-[14px] sm:text-[18px] text-[#707070] mb-4"/>
+                          classNames="font-medium text-[14px] sm:text-[18px] text-[#707070] mb-4 drop-shadow-lg"/>
             <div
                 className='flex flex-col lg:flex-row justify-center items-center gap-6 w-full max-w-[1150px] mb-[38px]'>
                 <ServiceCard src='/assets/illustrations/Lifesavers-Ger.png' title='Geriatric
