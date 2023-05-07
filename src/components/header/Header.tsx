@@ -5,6 +5,7 @@ import {ClassNames} from "../../util/ClassNames";
 import {ThemeContext} from "../../context/ThemeContext";
 import {ScrollContext} from "../../context/ScrollContext";
 import {motion, useAnimation} from "framer-motion";
+import {BookForm} from "../forms/BookForm";
 
 interface Props {
     title?: string
@@ -12,7 +13,8 @@ interface Props {
 
 export const Header: React.FC<Props> = ({title}) => {
     const [showMenu, setShowMenu] = useState<boolean>(false);
-    const [isScrolling, setIsScrolling] = useState(false)
+    const [showModal, setShowModal] = useState<boolean>(false)
+    const [isScrolling, setIsScrolling] = useState<boolean>(false)
     const {darkMode} = useContext(ThemeContext)
     const {setScrollId} = useContext(ScrollContext)
     const ref = useRef(null)
@@ -66,7 +68,7 @@ export const Header: React.FC<Props> = ({title}) => {
     return (
         <>
             <header
-                className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', isScrolling ? 'shadow-lg' : '', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center z-50 transition duration-300 ease-in-out")}>
+                className={ClassNames(darkMode ? 'bg-dark' : 'bg-light', isScrolling ? 'shadow-lg' : '', "w-full fixed h-20 top-0 left-0 right-0 px-6 sm:px-12 flex items-center justify-center z-40 transition duration-300 ease-in-out")}>
                 < nav className="flex justify-between items-center w-container">
                     <motion.a ref={ref} variants={navAnimation} initial={title === 'Home' ? 'hidden' : 'show'}
                               animate={controls}
@@ -185,9 +187,14 @@ export const Header: React.FC<Props> = ({title}) => {
                                 whileHover={{scale: 1.1}}
                                 whileTap={{scale: 1.0}}
                                 transition={{type: "spring", stiffness: 400, damping: 17, ease: 'easeInOut',}}
-                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg shadow-Button hover:shadow-darkButton">
+                                className="bg-lightBlue uppercase font-bold text-sm text-[#FFFFFF] dark:text-dark px-6 py-2 rounded-lg shadow-Button hover:shadow-darkButton"
+                                onClick={() => setShowModal(true)}
+                            >
                                 Book A Call
                             </motion.button>
+                            {!showModal ||
+                                <BookForm showModal={showModal}
+                                          setShowModal={() => setShowModal(false)}/>}
                         </div>
                         <div
                             className="text-[2rem] text-lightBlue absolute top-[22px] right-6 sm:right-12 cursor-pointer md:hidden">

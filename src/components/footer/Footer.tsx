@@ -12,9 +12,9 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
 
     if (removeFooter) return null
     return (
-        <footer className="w-full bg-gradient-to-b from-lightBlue to-green">
+        <footer className="w-full bg-gradient-to-b from-lightBlue to-green z-40">
             <div className="flex justify-center px-6 xs:px-12">
-                <div className="flex flex-col sm:flex-row w-full xs:w-container mt-[88px] mb-32 xs:mb-48 z-50">
+                <div className="flex flex-col sm:flex-row w-full xs:w-container mt-[88px] mb-32 xs:mb-48">
                     <div className="mr-14 md:mr-28 xl:mr-36">
                         <Link
                             href=""
@@ -33,7 +33,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                         </p>
                     </div>
                     <div
-                        className="grid grid-cols-2 ml-8 mt-8 xs:grid-cols-3 sm:mt-0 sm:ml-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12 2xl:gap-20 z-50">
+                        className="grid grid-cols-2 ml-8 mt-8 xs:grid-cols-3 sm:mt-0 sm:ml-0 sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-12 2xl:gap-20">
                         <div>
                             <h3 className="font-bold tracking-wide text-[16px] text-white">
                                 Explore
@@ -57,7 +57,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="z-50">
+                        <div>
                             <h3 className="font-bold tracking-wide text-[16px] text-white">
                                 Site
                             </h3>
@@ -83,7 +83,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="z-20">
+                        <div>
                             <h3 className="w-24 font-bold tracking-wide text-[16px] text-white mb-1">
                                 Follow Us
                             </h3>
@@ -101,7 +101,7 @@ export const Footer: React.FC<Props> = ({removeFooter}) => {
                     </div>
                 </div>
             </div>
-            <div className="text-center text-white text-[12px] sm:text-[16px] font-thin z-50">
+            <div className="text-center text-white text-[12px] sm:text-[16px] font-thin">
                 <span>&#169; Copyright Renewability OT. All Rights Reserved</span>
             </div>
         </footer>

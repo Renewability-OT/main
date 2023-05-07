@@ -1,5 +1,6 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {motion, useAnimation, useInView} from "framer-motion";
+import {BookForm} from "../forms/BookForm";
 
 const bannerAnimation = {
     hidden: {
@@ -46,6 +47,7 @@ export const BannerSection: React.FC = () => {
     const ref = useRef(null)
     const controls = useAnimation();
     const isInView = useInView(ref, {once: true})
+    const [showModal, setShowModal] = useState<boolean>(false)
     useEffect(() => {
         if (isInView) {
             controls.start("visible");
@@ -74,6 +76,7 @@ export const BannerSection: React.FC = () => {
                                 whileTap={{scale: 1.0}}
                                 transition={{type: "spring", stiffness: 400, damping: 17}}
                                 className="w-[130px] xl:w-[160px] text-white bg-[#35C99B] font-medium border active:border-none py-1 xs:py-2 px-3 rounded-lg shadow-Button cursor-pointer"
+                                onClick={() => setShowModal(true)}
                             >
                                 Book A Call
                             </motion.button>
@@ -97,6 +100,9 @@ export const BannerSection: React.FC = () => {
                     </div>
                 </div>
             </motion.div>
+            {!showModal ||
+                <BookForm showModal={showModal}
+                          setShowModal={() => setShowModal(false)}/>}
         </div>
     );
 };

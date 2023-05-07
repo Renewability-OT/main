@@ -49,6 +49,20 @@ module.exports = {
                 'cloudBg': "url('/assets/photos/cloudbg.jpeg')",
                 'leafBg': "url('/assets/photos/leaf.jpeg')",
                 'leaf2Bg': "url('/assets/photos/leaf2.jpeg')",
+            },
+            keyframes: {
+                scaleIn: {
+                    '0%': {opacity: 0, transform: 'scale(0.3)'},
+                    '100%': {opacity: 1, transform: 'scale(1)'},
+                },
+                fadeIn: {
+                    '0%': {opacity: 0},
+                    '100%': {opacity: 1},
+                },
+            },
+            animation: {
+                'scale': 'scaleIn .25s ease-in-out',
+                'fade': 'fadeIn .25s ease-in-out',
             }
         },
         fontFamily: {

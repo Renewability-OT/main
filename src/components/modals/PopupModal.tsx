@@ -30,13 +30,13 @@ export const PopupModal: React.FC<Props> = ({
         <div
             className={ClassNames(
                 visible ? 'block show' : 'hidden',
-                'modal backdrop-brightness-[0.3] fade fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto flex justify-center px-7 z-50',
+                'modal backdrop-brightness-[0.3] fade fixed top-0 left-0 w-full h-full outline-none overflow-x-hidden overflow-y-auto flex justify-center px-7 z-50 animate-fade',
             )}
             tabIndex={-1}
             role="dialog"
         >
             <div
-                className="modal-dialog modal-dialog-centered modal-dialog-scrollable relative w-auto pointer-events-none flex flex-col justify-center items-center">
+                className="modal-dialog modal-dialog-centered modal-dialog-scrollable relative w-auto pointer-events-none flex flex-col justify-center items-center animate-scale z-50">
                 <div
                     className="modal-content border-none shadow-lg relative flex flex-col pointer-events-auto bg-white dark:bg-dark bg-clip-padding rounded-md outline-none text-current">
                     <div
