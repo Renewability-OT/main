@@ -56,7 +56,7 @@ export const BlogContextProvider: React.FC<Props> = ({children}) => {
     const [posts, setPosts] = useState<Post[]>(initialState)
     const [author, setAuthor] = useState<Author>()
     const mediumURL =
-        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@colinbreeding";
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dgubisch";
     useEffect(() => {
         axios({
             method: 'get',
